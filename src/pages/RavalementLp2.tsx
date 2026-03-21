@@ -23,6 +23,8 @@ const RavalementLp2 = () => {
     phone: "",
     message: "",
     rdvType: "",
+    address: "",
+    postalCode: "",
     date: "",
     time: "",
   });
