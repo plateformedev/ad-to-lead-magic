@@ -84,7 +84,7 @@ const Modele2 = () => {
               ))}
             </div>
 
-            <img src={certirenovLogo} alt="CertiRénov RGE" className="h-20 w-auto object-contain mt-2" />
+            <img src={certirenovLogo} alt="CertiRénov RGE" className="h-20 w-auto object-contain mt-2 self-start" />
           </div>
 
           {/* Right - Form */}
