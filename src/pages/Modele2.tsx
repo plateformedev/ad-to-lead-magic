@@ -69,16 +69,16 @@ const Modele2 = () => {
               Spécialistes du bâti ancien. Devis gratuit sous 24h, garantie décennale, tarifs fermes.
             </p>
 
-            <div className="grid grid-cols-2 gap-x-6 gap-y-2 mb-6">
+            <div className="grid grid-cols-2 gap-x-8 gap-y-3 mb-6">
               {[
                 { icon: Shield, label: "Garantie décennale" },
                 { icon: Clock, label: "Devis sous 24h" },
                 { icon: Award, label: "Artisans qualifiés" },
                 { icon: ThumbsUp, label: "500+ chantiers" },
               ].map((item) => (
-                <div key={item.label} className="flex items-center gap-2">
-                  <item.icon className="w-4 h-4 text-accent flex-shrink-0" />
-                  <span className="text-sm font-semibold" style={{ color: "rgba(255,255,255,0.9)" }}>{item.label}</span>
+                <div key={item.label} className="flex items-center gap-3">
+                  <item.icon className="w-6 h-6 text-accent flex-shrink-0" />
+                  <span className="text-base font-semibold" style={{ color: "rgba(255,255,255,0.9)" }}>{item.label}</span>
                 </div>
               ))}
             </div>
