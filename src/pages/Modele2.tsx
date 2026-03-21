@@ -99,10 +99,12 @@ const Modele2 = () => {
 
           {/* Right - Form */}
           <div className="lg:w-1/2 flex flex-col items-center justify-center w-full">
-            <div className="lg:hidden inline-flex items-center gap-2 rounded-full bg-accent/90 px-4 py-1.5 text-sm font-semibold text-accent-foreground mb-3">
-              ⭐ Noté 4,8/5 sur Google
+            <div className="lg:hidden flex items-center gap-3 mb-3">
+              <div className="inline-flex items-center gap-2 rounded-full bg-accent/90 px-4 py-1.5 text-sm font-semibold text-accent-foreground">
+                ⭐ Noté 4,8/5 sur Google
+              </div>
+              <img src={certirenovLogo} alt="CertiRénov RGE" className="h-14 w-auto object-contain" />
             </div>
-            <img src={certirenovLogo} alt="CertiRénov RGE" className="lg:hidden h-14 w-auto object-contain mb-3" />
             {submitted ? (
               <div className="bg-card/95 backdrop-blur-sm rounded-xl p-8 shadow-[var(--shadow-card)] border border-border text-center max-w-md w-full">
                 <CheckCircle2 className="w-14 h-14 text-trust mx-auto mb-4" />
