@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Phone, CheckCircle2, Shield, Clock, Award, ThumbsUp } from "lucide-react";
+import { Phone, CheckCircle2, Shield, Clock, Award, ThumbsUp, Star } from "lucide-react";
 import { toast } from "sonner";
 import heroImage from "@/assets/ravalement1.jpg";
 import logoDsd from "@/assets/logo-dsd.png";
@@ -57,9 +57,8 @@ const Modele2 = () => {
         <div className="relative z-10 container mx-auto px-4 flex flex-col lg:flex-row items-center gap-6 lg:gap-12 py-6 lg:py-0 h-full">
           {/* Left - Hero content */}
           <div className="lg:w-1/2 flex flex-col justify-center">
-            <div className="inline-flex items-center gap-2 rounded-full bg-accent/90 px-4 py-1.5 text-sm font-semibold text-accent-foreground mb-4 w-fit animate-fade-up">
-              ⭐ Noté 4,8/5 sur Google
-            </div>
+
+
 
             <h1 className="text-4xl lg:text-6xl font-extrabold leading-tight mb-4 animate-fade-up" style={{ color: "white", animationDelay: "0.1s" }}>
               Ravalement de façade<br />
@@ -84,7 +83,17 @@ const Modele2 = () => {
               ))}
             </div>
 
-            <img src={certirenovLogo} alt="CertiRénov RGE" className="h-20 w-auto object-contain mt-2 self-start animate-fade-up" style={{ animationDelay: "0.4s" }} />
+            <div className="flex items-center gap-6 mt-2 animate-fade-up" style={{ animationDelay: "0.4s" }}>
+              <img src={certirenovLogo} alt="CertiRénov RGE" className="h-20 w-auto object-contain" />
+              <div className="flex items-center gap-2">
+                <div className="flex gap-0.5">
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <Star key={i} className={`w-5 h-5 ${i < 4 ? "fill-accent text-accent" : "fill-accent/80 text-accent/80"}`} />
+                  ))}
+                </div>
+                <span className="text-lg font-bold" style={{ color: "rgba(255,255,255,0.9)" }}>4,8/5 sur Google</span>
+              </div>
+            </div>
           </div>
 
           {/* Right - Form */}
