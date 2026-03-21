@@ -69,7 +69,7 @@ const Modele2 = () => {
               ⭐ Noté 4,8/5 sur Google
             </div>
 
-            <h1 className="text-4xl lg:text-6xl font-extrabold leading-tight mb-4 animate-fade-up text-foreground lg:text-white" style={{ animationDelay: "0.1s" }}>
+            <h1 className="text-4xl lg:text-6xl font-extrabold leading-tight mb-4 animate-fade-up text-white" style={{ animationDelay: "0.1s" }}>
               Ravalement de façade<br />
               <span className="text-accent">à Paris & Île-de-France</span>
             </h1>
