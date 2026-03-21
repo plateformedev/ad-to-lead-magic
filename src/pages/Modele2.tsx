@@ -138,7 +138,7 @@ const Modele2 = () => {
                     />
                   </div>
                   <div>
-                    <label htmlFor="m2-phone" className="block text-sm font-semibold text-foreground mb-1">
+                    <label htmlFor="m2-phone" className="block text-base font-semibold text-foreground mb-1">
                       Téléphone *
                     </label>
                     <input
