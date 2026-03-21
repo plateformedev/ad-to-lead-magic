@@ -161,7 +161,7 @@ const Modele2 = () => {
                         key={option}
                         type="button"
                         onClick={() => setFormData({ ...formData, delai: option })}
-                        className={`flex-1 rounded-lg border px-3 py-2 text-sm font-medium transition-all ${
+                        className={`flex-1 rounded-lg border px-3 py-2 text-base font-medium transition-all ${
                           formData.delai === option
                             ? "bg-primary border-primary text-primary-foreground"
                             : "border-input bg-background text-foreground hover:border-ring"
