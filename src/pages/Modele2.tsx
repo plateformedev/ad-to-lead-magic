@@ -62,9 +62,9 @@ const Modele2 = () => {
           {/* Left - Hero content */}
           <div className="lg:w-1/2 flex flex-col justify-center">
 
-            <div className="inline-flex items-center gap-2 mb-4 animate-fade-up rounded-full px-5 py-2.5 border border-accent/40" style={{ background: "linear-gradient(135deg, hsl(var(--accent) / 0.25), hsl(var(--accent) / 0.10))", animationDelay: "0.05s" }}>
-              <Star className="w-5 h-5 fill-accent text-accent" />
-              <span className="text-base font-bold" style={{ color: "rgba(255,255,255,0.95)" }}>Noté 4,8/5 sur Google</span>
+            <div className="inline-flex items-center gap-2 mb-4 animate-fade-up rounded-full px-5 py-2" style={{ background: "linear-gradient(135deg, #c8a44e, #a07c2a)", border: "1px solid #d4b35a", animationDelay: "0.05s" }}>
+              <Star className="w-4 h-4 fill-white text-white" />
+              <span className="text-sm font-semibold text-white">Noté 4,8/5 sur Google</span>
             </div>
 
             <h1 className="text-4xl lg:text-6xl font-extrabold leading-tight mb-4 animate-fade-up" style={{ color: "white", animationDelay: "0.1s" }}>
