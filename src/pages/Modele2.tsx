@@ -18,7 +18,7 @@ const Modele2 = () => {
     name: "",
     email: "",
     phone: "",
-    service: "",
+    delai: "",
     message: "",
   });
 
