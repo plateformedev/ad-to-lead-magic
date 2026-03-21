@@ -134,7 +134,7 @@ const RavalementLp2 = () => {
                 <CheckCircle2 className="w-14 h-14 text-trust mx-auto mb-4" />
                 <h2 className="text-3xl font-bold text-foreground mb-3">Rendez-vous demandé !</h2>
                 <p className="text-muted-foreground">
-                  Merci {formData.name}, nous confirmerons votre rendez-vous sous 24h.
+                  Merci {formData.name}. Nous vous recontacterons rapidement.
                 </p>
                 <div className="mt-4 p-3 bg-secondary rounded-lg text-sm text-foreground">
                   <p className="font-semibold">{formData.rdvType === "phone" ? "Par téléphone" : formData.rdvType === "visio" ? "Par visio" : "Sur place"}</p>
