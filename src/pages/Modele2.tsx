@@ -32,10 +32,10 @@ const Modele2 = () => {
   return (
     <div className="h-screen flex flex-col overflow-hidden">
       {/* Header */}
-      <div className="bg-white py-3 flex-shrink-0 border-b border-border">
+      <div className="absolute top-0 left-0 right-0 z-20 py-3">
         <div className="container mx-auto px-4 flex items-center justify-between">
           <img src={logoDsd} alt="DSD Rénov" className="h-8" />
-          <a href="tel:0187666549" className="flex items-center gap-2 text-foreground hover:text-primary transition-colors">
+          <a href="tel:0187666549" className="flex items-center gap-2 hover:text-accent transition-colors" style={{ color: "white" }}>
             <Phone className="w-4 h-4" />
             <span className="text-sm font-bold">01 87 66 65 49</span>
           </a>
