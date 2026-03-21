@@ -194,7 +194,7 @@ const Modele2 = () => {
                   Recevoir mon devis gratuit →
                 </button>
 
-                <p className="text-xs text-muted-foreground text-center">
+                <p className="text-sm text-muted-foreground text-center">
                   Sans engagement · Réponse sous 24h
                 </p>
               </form>
