@@ -1,5 +1,5 @@
 import { useState, useMemo } from "react";
-import { Phone, CheckCircle2, Shield, Clock, Award, ThumbsUp, Star } from "lucide-react";
+import { Phone, CheckCircle2, Shield, Users, Award, Hammer, Star } from "lucide-react";
 import { toast } from "sonner";
 import heroImg1 from "@/assets/ravalement1-2.jpg";
 import heroImg2 from "@/assets/ravalement2-2.jpg";
@@ -78,9 +78,9 @@ const Modele2 = () => {
             <div className="grid grid-cols-2 gap-x-8 gap-y-3 mb-6 animate-fade-up" style={{ animationDelay: "0.3s" }}>
               {[
                 { icon: Shield, label: "Garantie décennale" },
-                { icon: Clock, label: "Professionnels qualifiés" },
+                { icon: Users, label: "Professionnels qualifiés" },
                 { icon: Award, label: "+10 ans expérience" },
-                { icon: ThumbsUp, label: "+100 chantiers" },
+                { icon: Hammer, label: "+100 chantiers" },
               ].map((item) => (
                 <div key={item.label} className="flex items-center gap-3">
                   <item.icon className="w-7 h-7 text-accent flex-shrink-0" />
