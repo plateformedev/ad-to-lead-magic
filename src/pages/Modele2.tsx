@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Phone, CheckCircle2, Shield, Clock, Award, ThumbsUp } from "lucide-react";
 import { toast } from "sonner";
 import heroImage from "@/assets/ravalement1.jpg";
+import logoDsd from "@/assets/logo-dsd.png";
 
 const serviceOptions = [
   "Ravalement complet",
@@ -31,15 +32,13 @@ const Modele2 = () => {
   return (
     <div className="h-screen flex flex-col overflow-hidden">
       {/* Header */}
-      <div className="bg-primary py-3 flex-shrink-0">
+      <div className="bg-white py-3 flex-shrink-0 border-b border-border">
         <div className="container mx-auto px-4 flex items-center justify-between">
-          <span className="text-primary-foreground text-sm font-bold tracking-wide">
-            Spécialiste ravalement
-          </span>
-          <a href="tel:0187666549" className="flex items-center gap-2 text-primary-foreground hover:text-accent transition-colors">
+          <a href="tel:0187666549" className="flex items-center gap-2 text-foreground hover:text-primary transition-colors">
             <Phone className="w-4 h-4" />
             <span className="text-sm font-bold">01 87 66 65 49</span>
           </a>
+          <img src={logoDsd} alt="DSD Rénov" className="h-8" />
         </div>
       </div>
 
