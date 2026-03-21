@@ -18,7 +18,10 @@ const serviceOptions = [
   "Autre demande",
 ];
 
+const heroImages = [heroImg1, heroImg2, heroImg3, heroImg4, heroImg5];
+
 const Modele2 = () => {
+  const heroImage = useMemo(() => heroImages[Math.floor(Math.random() * heroImages.length)], []);
   const [submitted, setSubmitted] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
