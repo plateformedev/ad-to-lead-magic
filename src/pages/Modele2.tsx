@@ -207,6 +207,24 @@ const Modele2 = () => {
                 </p>
               </form>
             )}
+
+            {/* Mobile: Trust elements under form */}
+            <div className="lg:hidden w-full flex flex-col items-center gap-3 mt-4">
+              <div className="grid grid-cols-2 gap-x-6 gap-y-2">
+                {[
+                  { icon: Shield, label: "Garantie décennale" },
+                  { icon: Users, label: "Professionnels qualifiés" },
+                  { icon: Award, label: "+10 ans expérience" },
+                  { icon: Hammer, label: "+100 chantiers" },
+                ].map((item) => (
+                  <div key={item.label} className="flex items-center gap-2">
+                    <item.icon className="w-5 h-5 text-accent flex-shrink-0" />
+                    <span className="text-sm font-semibold text-foreground">{item.label}</span>
+                  </div>
+                ))}
+              </div>
+              <img src={certirenovLogo} alt="CertiRénov RGE" className="h-14 w-auto object-contain" />
+            </div>
           </div>
         </div>
       </div>
