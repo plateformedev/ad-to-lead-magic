@@ -73,7 +73,7 @@ const Modele2 = () => {
             <div className="grid grid-cols-2 gap-x-8 gap-y-3 mb-6">
               {[
                 { icon: Shield, label: "Garantie décennale" },
-                { icon: Clock, label: "Devis sous 24h" },
+                { icon: Clock, label: "Devis personnalisé" },
                 { icon: Award, label: "+10 ans expérience" },
                 { icon: ThumbsUp, label: "500+ chantiers" },
               ].map((item) => (
