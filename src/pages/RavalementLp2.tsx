@@ -150,6 +150,20 @@ const RavalementLp2 = () => {
                 {step === 1 ? (
                   <>
                     <div>
+                      <label htmlFor="lp2-message" className="block text-base font-semibold text-foreground mb-1">
+                        Décrivez votre projet
+                      </label>
+                      <textarea
+                        id="lp2-message"
+                        rows={4}
+                        value={formData.message}
+                        onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                        className="w-full rounded-lg border border-input bg-background px-4 py-2.5 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-none"
+                        placeholder="Surface, type de bâtiment, travaux souhaités..."
+                      />
+                    </div>
+
+                    <div>
                       <label className="block text-base font-semibold text-foreground mb-2">
                         Comment souhaitez-vous être contacté ? *
                       </label>
@@ -174,20 +188,6 @@ const RavalementLp2 = () => {
                           </button>
                         ))}
                       </div>
-                    </div>
-
-                    <div>
-                      <label htmlFor="lp2-message" className="block text-base font-semibold text-foreground mb-1">
-                        Décrivez votre projet
-                      </label>
-                      <textarea
-                        id="lp2-message"
-                        rows={4}
-                        value={formData.message}
-                        onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                        className="w-full rounded-lg border border-input bg-background px-4 py-2.5 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-none"
-                        placeholder="Surface, type de bâtiment, travaux souhaités..."
-                      />
                     </div>
 
                     <button
