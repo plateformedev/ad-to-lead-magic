@@ -174,7 +174,7 @@ const Modele2 = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="m2-message" className="block text-sm font-semibold text-foreground mb-1">
+                  <label htmlFor="m2-message" className="block text-base font-semibold text-foreground mb-1">
                     Décrivez votre projet
                   </label>
                   <textarea
