@@ -210,7 +210,7 @@ const Modele2 = () => {
                 </button>
 
                 <p className="text-sm text-muted-foreground text-center">
-                  Sans engagement · Réponse sous 24h
+                  Sans engagement · Conseils d'experts
                 </p>
               </form>
             )}
