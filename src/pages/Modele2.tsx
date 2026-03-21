@@ -1,7 +1,11 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { Phone, CheckCircle2, Shield, Clock, Award, ThumbsUp, Star } from "lucide-react";
 import { toast } from "sonner";
-import heroImage from "@/assets/ravalement1.jpg";
+import heroImg1 from "@/assets/ravalement1-2.jpg";
+import heroImg2 from "@/assets/ravalement2-2.jpg";
+import heroImg3 from "@/assets/ravalement3-2.jpg";
+import heroImg4 from "@/assets/ravalement4-2.jpg";
+import heroImg5 from "@/assets/ravalement5-2.jpg";
 import logoDsd from "@/assets/logo-dsd.png";
 import certirenovLogo from "@/assets/certirenov-rge.png";
 
@@ -14,7 +18,10 @@ const serviceOptions = [
   "Autre demande",
 ];
 
+const heroImages = [heroImg1, heroImg2, heroImg3, heroImg4, heroImg5];
+
 const Modele2 = () => {
+  const heroImage = useMemo(() => heroImages[Math.floor(Math.random() * heroImages.length)], []);
   const [submitted, setSubmitted] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
