@@ -72,7 +72,7 @@ const Modele2 = () => {
             </h1>
 
             <p className="text-lg lg:text-xl mb-8 max-w-md animate-fade-up" style={{ color: "rgba(255,255,255,0.85)", animationDelay: "0.2s" }}>
-              Spécialistes du bâti ancien. Devis gratuit sous 24h, garantie décennale, tarifs fermes.
+              Spécialistes du bâti ancien et patrimonial, nous sommes des experts du ravalement de façade pour immeubles, copropriétés et tous types de biens.
             </p>
 
             <div className="grid grid-cols-2 gap-x-8 gap-y-3 mb-6 animate-fade-up" style={{ animationDelay: "0.3s" }}>
