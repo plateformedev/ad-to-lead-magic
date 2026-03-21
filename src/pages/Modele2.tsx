@@ -211,8 +211,8 @@ const Modele2 = () => {
         <div className="container mx-auto px-4 flex flex-wrap justify-center gap-6 text-sm" style={{ color: "rgba(255,255,255,0.85)" }}>
           <span>© {new Date().getFullYear()} DSD Rénov</span>
           <a href="mailto:bonjour@dsdrenov.com" className="hover:text-white transition-colors">bonjour@dsdrenov.com</a>
-          <span>Paris & Île-de-France</span>
-          <span>Garantie décennale</span>
+          <a href="https://www.dsdrenov.com/politique-de-confidentialite/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Politique de confidentialité</a>
+          <a href="https://www.dsdrenov.com/mentions-legales/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Mentions légales</a>
         </div>
       </div>
     </div>
