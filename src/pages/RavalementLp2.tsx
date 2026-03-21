@@ -243,19 +243,35 @@ const RavalementLp2 = () => {
                       ← Retour
                     </button>
 
-                    <div>
-                      <label htmlFor="lp2-name" className="block text-base font-semibold text-foreground mb-1">
-                        Nom complet *
-                      </label>
-                      <input
-                        id="lp2-name"
-                        type="text"
-                        required
-                        value={formData.name}
-                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        className="w-full rounded-lg border border-input bg-background px-4 py-2.5 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
-                        placeholder="Jean Dupont"
-                      />
+                    <div className="grid grid-cols-2 gap-3">
+                      <div>
+                        <label htmlFor="lp2-name" className="block text-base font-semibold text-foreground mb-1">
+                          Nom complet *
+                        </label>
+                        <input
+                          id="lp2-name"
+                          type="text"
+                          required
+                          value={formData.name}
+                          onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                          className="w-full rounded-lg border border-input bg-background px-4 py-2.5 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+                          placeholder="Jean Dupont"
+                        />
+                      </div>
+                      <div>
+                        <label htmlFor="lp2-postalcode2" className="block text-base font-semibold text-foreground mb-1">
+                          Code postal *
+                        </label>
+                        <input
+                          id="lp2-postalcode2"
+                          type="text"
+                          required
+                          value={formData.postalCode}
+                          onChange={(e) => setFormData({ ...formData, postalCode: e.target.value })}
+                          className="w-full rounded-lg border border-input bg-background px-4 py-2.5 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+                          placeholder="75002"
+                        />
+                      </div>
                     </div>
 
                     {formData.rdvType === "onsite" && (
