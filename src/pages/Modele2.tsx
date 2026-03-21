@@ -65,9 +65,6 @@ const Modele2 = () => {
           {/* Left - Hero content */}
           <div className="lg:w-1/2 flex flex-col justify-center">
 
-            <div className="inline-flex items-center gap-2 rounded-full bg-accent/90 px-4 py-1.5 text-sm font-semibold text-accent-foreground mb-4 w-fit mx-auto lg:mx-0 animate-fade-up" style={{ animationDelay: "0.05s" }}>
-              ⭐ Noté 4,8/5 sur Google
-            </div>
 
             <h1 className="text-4xl lg:text-6xl font-extrabold leading-tight mb-4 animate-fade-up text-white" style={{ animationDelay: "0.1s" }}>
               Ravalement de façade<br />
