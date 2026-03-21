@@ -284,7 +284,7 @@ const RavalementLp2 = () => {
                         <Clock className="w-4 h-4 inline mr-1.5 -mt-0.5" />
                         Heure souhaitée *
                       </label>
-                      <div className="grid grid-cols-5 gap-1.5 max-h-[80px] overflow-y-auto">
+                      <div className="grid grid-cols-4 gap-1.5">
                         {timeSlots.map((time) => (
                           <button
                             key={time}
