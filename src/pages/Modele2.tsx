@@ -30,20 +30,16 @@ const Modele2 = () => {
 
   return (
     <div className="h-screen flex flex-col overflow-hidden">
-      {/* Top trust bar */}
-      <div className="bg-primary py-2.5 flex-shrink-0">
-        <div className="container mx-auto px-4 flex flex-wrap justify-center gap-4 md:gap-10">
-          {[
-            { icon: Shield, label: "Garantie décennale" },
-            { icon: Clock, label: "Devis sous 24h" },
-            { icon: Award, label: "Artisans qualifiés" },
-            { icon: ThumbsUp, label: "500+ chantiers" },
-          ].map((item) => (
-            <div key={item.label} className="flex items-center gap-1.5 text-primary-foreground">
-              <item.icon className="w-4 h-4 text-accent" />
-              <span className="text-xs font-semibold">{item.label}</span>
-            </div>
-          ))}
+      {/* Header */}
+      <div className="bg-primary py-3 flex-shrink-0">
+        <div className="container mx-auto px-4 flex items-center justify-between">
+          <span className="text-primary-foreground text-sm font-bold tracking-wide">
+            Spécialiste ravalement
+          </span>
+          <a href="tel:0187666549" className="flex items-center gap-2 text-primary-foreground hover:text-accent transition-colors">
+            <Phone className="w-4 h-4" />
+            <span className="text-sm font-bold">01 87 66 65 49</span>
+          </a>
         </div>
       </div>
 
