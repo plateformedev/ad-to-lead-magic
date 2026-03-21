@@ -11,7 +11,7 @@ import certirenovLogo from "@/assets/certirenov-rge.png";
 
 const heroImages = [heroImg1, heroImg2, heroImg3, heroImg4, heroImg5];
 
-const timeSlots = ["8h", "10h", "12h", "14h", "16h", "18h", "20h"];
+const timeSlots = ["8h", "10h", "12h", "13h", "14h", "16h", "18h", "20h"];
 
 const RavalementLp2 = () => {
   const heroImage = useMemo(() => heroImages[Math.floor(Math.random() * heroImages.length)], []);
@@ -284,7 +284,7 @@ const RavalementLp2 = () => {
                         <Clock className="w-4 h-4 inline mr-1.5 -mt-0.5" />
                         Heure souhaitée *
                       </label>
-                      <div className="grid grid-cols-5 gap-1.5 max-h-[80px] overflow-y-auto">
+                      <div className="grid grid-cols-4 gap-1.5">
                         {timeSlots.map((time) => (
                           <button
                             key={time}
