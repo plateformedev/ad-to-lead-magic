@@ -194,7 +194,7 @@ const Modele2 = () => {
                   </label>
                   <textarea
                     id="m2-message"
-                    rows={2}
+                    rows={4}
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     className="w-full rounded-lg border border-input bg-background px-4 py-2.5 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-none"
