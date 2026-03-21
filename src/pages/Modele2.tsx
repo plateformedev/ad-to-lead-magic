@@ -36,10 +36,7 @@ const Modele2 = () => {
       <div className="absolute top-0 left-0 right-0 z-20 py-3">
         <div className="container mx-auto px-4 flex items-center justify-between">
           <img src={logoDsd} alt="DSD Rénov" className="h-10" />
-          <a href="tel:0187666549" className="flex items-center gap-2 hover:text-accent transition-colors" style={{ color: "white" }}>
-            <Phone className="w-5 h-5" />
-            <span className="text-base font-bold">01 87 66 65 49</span>
-          </a>
+          {/* Téléphone masqué temporairement */}
         </div>
       </div>
 
