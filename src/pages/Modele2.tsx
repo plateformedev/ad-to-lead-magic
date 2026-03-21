@@ -56,7 +56,7 @@ const Modele2 = () => {
         <div className="relative z-10 container mx-auto px-4 flex flex-col lg:flex-row items-center gap-6 lg:gap-12 py-6 lg:py-0 h-full">
           {/* Left - Hero content */}
           <div className="lg:w-1/2 flex flex-col justify-center">
-            <div className="inline-flex items-center gap-2 rounded-full bg-accent/90 px-3 py-1 text-xs font-semibold text-accent-foreground mb-4 w-fit">
+            <div className="inline-flex items-center gap-2 rounded-full bg-accent/90 px-4 py-1.5 text-sm font-semibold text-accent-foreground mb-4 w-fit">
               ⭐ Noté 4.5/5 sur Google
             </div>
 
