@@ -194,7 +194,7 @@ const RavalementLp2 = () => {
                       type="submit"
                       className="w-full rounded-lg bg-primary px-6 py-3.5 text-lg font-bold text-primary-foreground shadow-[var(--shadow-cta)] hover:brightness-110 transition-all"
                     >
-                      Prendre rendez-vous →
+                      Continuer →
                     </button>
 
                     <p className="text-sm text-muted-foreground text-center">
