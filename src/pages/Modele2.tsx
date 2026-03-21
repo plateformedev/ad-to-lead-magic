@@ -155,24 +155,6 @@ const Modele2 = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="m2-service" className="block text-sm font-semibold text-foreground mb-1">
-                    Type de prestation *
-                  </label>
-                  <select
-                    id="m2-service"
-                    required
-                    value={formData.service}
-                    onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                    className="w-full rounded-lg border border-input bg-background px-4 py-2.5 text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
-                  >
-                    <option value="">Sélectionnez une prestation</option>
-                    {serviceOptions.map((opt) => (
-                      <option key={opt} value={opt}>{opt}</option>
-                    ))}
-                  </select>
-                </div>
-
-                <div>
                   <label htmlFor="m2-message" className="block text-sm font-semibold text-foreground mb-1">
                     Décrivez votre projet
                   </label>
