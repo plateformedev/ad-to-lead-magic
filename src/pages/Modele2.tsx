@@ -76,7 +76,7 @@ const Modele2 = () => {
             <div className="grid grid-cols-2 gap-x-8 gap-y-3 mb-6 animate-fade-up" style={{ animationDelay: "0.3s" }}>
               {[
                 { icon: Shield, label: "Garantie décennale" },
-                { icon: Clock, label: "Devis personnalisé" },
+                { icon: Clock, label: "Spécialistes qualifiés" },
                 { icon: Award, label: "+10 ans expérience" },
                 { icon: ThumbsUp, label: "+100 chantiers" },
               ].map((item) => (
