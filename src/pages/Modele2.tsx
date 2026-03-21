@@ -59,7 +59,25 @@ const Modele2 = () => {
         </div>
         <div className="absolute inset-0 lg:hidden bg-muted" />
 
-        <div className="relative z-10 container mx-auto px-4 flex flex-col lg:flex-row items-center gap-6 lg:gap-12 py-6 lg:py-0 h-full">
+        <div className="relative z-10 container mx-auto px-4 flex flex-col lg:flex-row items-center gap-6 lg:gap-12 py-6 lg:py-0 h-full pt-20 lg:pt-6">
+          {/* Mobile: Trust elements under logo */}
+          <div className="lg:hidden w-full flex flex-col items-center gap-3">
+            <div className="grid grid-cols-2 gap-x-6 gap-y-2 animate-fade-up" style={{ animationDelay: "0.1s" }}>
+              {[
+                { icon: Shield, label: "Garantie décennale" },
+                { icon: Users, label: "Professionnels qualifiés" },
+                { icon: Award, label: "+10 ans expérience" },
+                { icon: Hammer, label: "+100 chantiers" },
+              ].map((item) => (
+                <div key={item.label} className="flex items-center gap-2">
+                  <item.icon className="w-5 h-5 text-accent flex-shrink-0" />
+                  <span className="text-sm font-semibold text-foreground">{item.label}</span>
+                </div>
+              ))}
+            </div>
+            <img src={certirenovLogo} alt="CertiRénov RGE" className="h-14 w-auto object-contain animate-fade-up" style={{ animationDelay: "0.2s" }} />
+          </div>
+
           {/* Left - Hero content */}
           <div className="lg:w-1/2 flex flex-col justify-center">
 
@@ -78,7 +96,8 @@ const Modele2 = () => {
               pour maisons, immeubles et copropriétés.
             </p>
 
-            <div className="grid grid-cols-2 gap-x-8 gap-y-3 mb-6 animate-fade-up" style={{ animationDelay: "0.3s" }}>
+            {/* Desktop only: trust elements */}
+            <div className="hidden lg:grid grid-cols-2 gap-x-8 gap-y-3 mb-6 animate-fade-up" style={{ animationDelay: "0.3s" }}>
               {[
                 { icon: Shield, label: "Garantie décennale" },
                 { icon: Users, label: "Professionnels qualifiés" },
@@ -92,7 +111,7 @@ const Modele2 = () => {
               ))}
             </div>
 
-            <div className="flex items-center mt-2 animate-fade-up" style={{ animationDelay: "0.4s" }}>
+            <div className="hidden lg:flex items-center mt-2 animate-fade-up" style={{ animationDelay: "0.4s" }}>
               <img src={certirenovLogo} alt="CertiRénov RGE" className="h-20 w-auto object-contain" />
             </div>
           </div>
