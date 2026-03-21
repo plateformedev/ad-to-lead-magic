@@ -1,5 +1,5 @@
 import { useState, useMemo } from "react";
-import { Phone, CheckCircle2, Shield, Clock, Award, ThumbsUp, Star } from "lucide-react";
+import { Phone, CheckCircle2, Shield, Users, Award, Hammer, Star } from "lucide-react";
 import { toast } from "sonner";
 import heroImg1 from "@/assets/ravalement1-2.jpg";
 import heroImg2 from "@/assets/ravalement2-2.jpg";
