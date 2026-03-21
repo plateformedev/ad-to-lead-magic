@@ -155,6 +155,26 @@ const Modele2 = () => {
                 </div>
 
                 <div>
+                  <label className="block text-sm font-semibold text-foreground mb-1.5">Délai</label>
+                  <div className="flex gap-2">
+                    {["Urgent", "1 - 6 mois", "+6 mois"].map((option) => (
+                      <button
+                        key={option}
+                        type="button"
+                        onClick={() => setFormData({ ...formData, delai: option })}
+                        className={`flex-1 rounded-lg border px-3 py-2 text-sm font-medium transition-all ${
+                          formData.delai === option
+                            ? "bg-primary border-primary text-primary-foreground"
+                            : "border-input bg-background text-foreground hover:border-ring"
+                        }`}
+                      >
+                        {option}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+                <div>
                   <label htmlFor="m2-message" className="block text-sm font-semibold text-foreground mb-1">
                     Décrivez votre projet
                   </label>
