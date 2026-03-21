@@ -3,6 +3,7 @@ import { Phone, CheckCircle2, Shield, Clock, Award, ThumbsUp } from "lucide-reac
 import { toast } from "sonner";
 import heroImage from "@/assets/ravalement1.jpg";
 import logoDsd from "@/assets/logo-dsd.png";
+import certirenovLogo from "@/assets/certirenov-rge.png";
 
 const serviceOptions = [
   "Ravalement complet",
