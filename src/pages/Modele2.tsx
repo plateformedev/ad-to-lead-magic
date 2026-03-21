@@ -204,10 +204,10 @@ const Modele2 = () => {
       </div>
 
       {/* Bottom bar */}
-      <div className="bg-foreground py-2.5 flex-shrink-0">
-        <div className="container mx-auto px-4 flex flex-wrap justify-center gap-6 text-background/70 text-xs">
+      <div className="absolute bottom-0 left-0 right-0 z-20 py-2.5">
+        <div className="container mx-auto px-4 flex flex-wrap justify-center gap-6 text-xs" style={{ color: "rgba(255,255,255,0.6)" }}>
           <span>© {new Date().getFullYear()} DSD Rénov</span>
-          <a href="mailto:bonjour@dsdrenov.com" className="hover:text-background transition-colors">bonjour@dsdrenov.com</a>
+          <a href="mailto:bonjour@dsdrenov.com" className="hover:text-white transition-colors">bonjour@dsdrenov.com</a>
           <span>Paris & Île-de-France</span>
           <span>Garantie décennale</span>
         </div>
