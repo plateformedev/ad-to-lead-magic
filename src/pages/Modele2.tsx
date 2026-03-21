@@ -74,7 +74,7 @@ const Modele2 = () => {
             <p className="text-xl lg:text-2xl mb-8 max-w-lg animate-fade-up" style={{ color: "rgba(255,255,255,0.85)", animationDelay: "0.2s" }}>
               Spécialistes du bâti ancien et patrimonial.<br />
               Experts du ravalement de façade<br />
-              pour maison, immeubles et copropriétés.
+              pour maisons, immeubles et copropriétés.
             </p>
 
             <div className="grid grid-cols-2 gap-x-8 gap-y-3 mb-6 animate-fade-up" style={{ animationDelay: "0.3s" }}>
