@@ -74,7 +74,7 @@ const Modele2 = () => {
               <span className="text-accent">à Paris & Île-de-France</span>
             </h1>
 
-            <p className="text-xl lg:text-2xl mb-8 max-w-lg animate-fade-up text-muted-foreground lg:text-white/85" style={{ animationDelay: "0.2s" }}>
+            <p className="text-xl lg:text-2xl mb-8 max-w-lg animate-fade-up text-white/85" style={{ animationDelay: "0.2s" }}>
               Spécialistes du bâti ancien et patrimonial.<br />
               Experts du ravalement de façade<br />
               pour maisons, immeubles et copropriétés.
