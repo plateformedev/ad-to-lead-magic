@@ -163,6 +163,37 @@ const RavalementLp2 = () => {
                       />
                     </div>
 
+                    <div className="grid grid-cols-2 gap-3">
+                      <div>
+                        <label htmlFor="lp2-email-s1" className="block text-base font-semibold text-foreground mb-1">
+                          E-mail *
+                        </label>
+                        <input
+                          id="lp2-email-s1"
+                          type="email"
+                          required
+                          value={formData.email}
+                          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                          className="w-full rounded-lg border border-input bg-background px-4 py-2.5 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+                          placeholder="jean@email.com"
+                        />
+                      </div>
+                      <div>
+                        <label htmlFor="lp2-phone-s1" className="block text-base font-semibold text-foreground mb-1">
+                          Téléphone *
+                        </label>
+                        <input
+                          id="lp2-phone-s1"
+                          type="tel"
+                          required
+                          value={formData.phone}
+                          onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                          className="w-full rounded-lg border border-input bg-background px-4 py-2.5 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+                          placeholder="06 12 34 56 78"
+                        />
+                      </div>
+                    </div>
+
                     <div>
                       <label className="block text-base font-semibold text-foreground mb-2">
                         Comment souhaitez-vous être contacté ? *
@@ -225,37 +256,6 @@ const RavalementLp2 = () => {
                         className="w-full rounded-lg border border-input bg-background px-4 py-2.5 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
                         placeholder="Jean Dupont"
                       />
-                    </div>
-
-                    <div className="grid grid-cols-2 gap-3">
-                      <div>
-                        <label htmlFor="lp2-email" className="block text-base font-semibold text-foreground mb-1">
-                          E-mail *
-                        </label>
-                        <input
-                          id="lp2-email"
-                          type="email"
-                          required
-                          value={formData.email}
-                          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                          className="w-full rounded-lg border border-input bg-background px-4 py-2.5 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
-                          placeholder="jean@email.com"
-                        />
-                      </div>
-                      <div>
-                        <label htmlFor="lp2-phone" className="block text-base font-semibold text-foreground mb-1">
-                          Téléphone *
-                        </label>
-                        <input
-                          id="lp2-phone"
-                          type="tel"
-                          required
-                          value={formData.phone}
-                          onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                          className="w-full rounded-lg border border-input bg-background px-4 py-2.5 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
-                          placeholder="06 12 34 56 78"
-                        />
-                      </div>
                     </div>
 
                     {formData.rdvType === "onsite" && (
