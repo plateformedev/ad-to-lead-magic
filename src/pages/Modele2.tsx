@@ -58,9 +58,9 @@ const Modele2 = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/50 to-black/30" />
         </div>
 
-        <div className="relative z-10 container mx-auto px-4 flex flex-col lg:flex-row items-start gap-6 lg:gap-12 pt-20 h-full">
+        <div className="relative z-10 container mx-auto px-4 flex flex-col lg:flex-row items-center gap-6 lg:gap-12 py-6 lg:py-0 h-full">
           {/* Left - Hero content */}
-          <div className="lg:w-1/2 flex flex-col justify-start">
+          <div className="lg:w-1/2 flex flex-col justify-center">
 
 
 
@@ -76,9 +76,9 @@ const Modele2 = () => {
             <div className="grid grid-cols-2 gap-x-8 gap-y-3 mb-6 animate-fade-up" style={{ animationDelay: "0.3s" }}>
               {[
                 { icon: Shield, label: "Garantie décennale" },
-                { icon: Clock, label: "Spécialistes qualifiés" },
+                { icon: Clock, label: "Devis personnalisé" },
                 { icon: Award, label: "+10 ans expérience" },
-                { icon: ThumbsUp, label: "+100 chantiers" },
+                { icon: ThumbsUp, label: "500+ chantiers" },
               ].map((item) => (
                 <div key={item.label} className="flex items-center gap-3">
                   <item.icon className="w-7 h-7 text-accent flex-shrink-0" />
@@ -89,8 +89,13 @@ const Modele2 = () => {
 
             <div className="flex items-center gap-6 mt-2 animate-fade-up" style={{ animationDelay: "0.4s" }}>
               <img src={certirenovLogo} alt="CertiRénov RGE" className="h-20 w-auto object-contain" />
-              <div className="inline-flex items-center gap-2 rounded-full bg-accent/90 px-4 py-1.5 text-sm font-semibold text-accent-foreground">
-                ⭐ Noté 4,8/5 sur Google
+              <div className="flex flex-col items-start">
+                <div className="flex gap-0.5">
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <Star key={i} className={`w-5 h-5 ${i < 4 ? "fill-accent text-accent" : "fill-accent/80 text-accent/80"}`} />
+                  ))}
+                </div>
+                <span className="text-base font-bold mt-1" style={{ color: "rgba(255,255,255,0.9)" }}>4,8/5 avis Google</span>
               </div>
             </div>
           </div>
