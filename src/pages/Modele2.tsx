@@ -43,7 +43,7 @@ const Modele2 = () => {
       </div>
 
       {/* Main content - full background image */}
-      <div className="flex-1 relative flex">
+      <div className="absolute inset-0 flex">
         {/* Full background image */}
         <div className="absolute inset-0">
           <div
