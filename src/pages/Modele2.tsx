@@ -84,13 +84,7 @@ const Modele2 = () => {
               ))}
             </div>
 
-            <a
-              href="tel:0187666549"
-              className="inline-flex items-center gap-2 text-accent font-bold text-xl hover:underline w-fit"
-            >
-              <Phone className="w-5 h-5" />
-              01 87 66 65 49
-            </a>
+            <img src={certirenovLogo} alt="CertiRénov RGE" className="h-14 mt-2" />
           </div>
 
           {/* Right - Form */}
