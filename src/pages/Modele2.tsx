@@ -47,15 +47,15 @@ const Modele2 = () => {
         </div>
       </div>
 
-      {/* Main content */}
+      {/* Main content - full background image */}
       <div className="flex-1 relative flex">
-        {/* Background image - left side */}
-        <div className="hidden lg:block absolute inset-0 w-1/2">
+        {/* Full background image */}
+        <div className="absolute inset-0">
           <div
             className="absolute inset-0 bg-cover bg-center"
             style={{ backgroundImage: `url(${heroImage})` }}
           />
-          <div className="absolute inset-0" style={{ background: "var(--hero-overlay)" }} />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/50 to-black/30" />
         </div>
 
         <div className="relative z-10 container mx-auto px-4 flex flex-col lg:flex-row items-center gap-6 lg:gap-12 py-6 lg:py-0 h-full">
@@ -65,18 +65,18 @@ const Modele2 = () => {
               ⭐ Noté 4.5/5 sur Google
             </div>
 
-            <h1 className="text-3xl lg:text-5xl font-extrabold leading-tight text-primary-foreground lg:text-primary-foreground mb-4">
-              <span className="lg:text-primary-foreground text-foreground">Ravalement de façade</span><br />
-              <span className="text-accent lg:text-accent">à Paris & Île-de-France</span>
+            <h1 className="text-3xl lg:text-5xl font-extrabold leading-tight mb-4" style={{ color: "white" }}>
+              Ravalement de façade<br />
+              <span className="text-accent">à Paris & Île-de-France</span>
             </h1>
 
-            <p className="text-base lg:text-lg text-foreground/80 lg:text-primary-foreground/85 mb-6 max-w-md">
+            <p className="text-base lg:text-lg mb-6 max-w-md" style={{ color: "rgba(255,255,255,0.85)" }}>
               Spécialistes du bâti ancien. Devis gratuit sous 24h, garantie décennale, tarifs fermes.
             </p>
 
             <a
               href="tel:0187666549"
-              className="inline-flex items-center gap-2 text-primary lg:text-accent font-bold text-lg hover:underline w-fit"
+              className="inline-flex items-center gap-2 text-accent font-bold text-lg hover:underline w-fit"
             >
               <Phone className="w-5 h-5" />
               01 87 66 65 49
@@ -86,7 +86,7 @@ const Modele2 = () => {
           {/* Right - Form */}
           <div className="lg:w-1/2 flex items-center justify-center w-full">
             {submitted ? (
-              <div className="bg-card rounded-xl p-8 shadow-[var(--shadow-card)] border border-border text-center max-w-md w-full">
+              <div className="bg-card/95 backdrop-blur-sm rounded-xl p-8 shadow-[var(--shadow-card)] border border-border text-center max-w-md w-full">
                 <CheckCircle2 className="w-14 h-14 text-trust mx-auto mb-4" />
                 <h2 className="text-2xl font-bold text-foreground mb-3">Demande envoyée !</h2>
                 <p className="text-muted-foreground">
@@ -96,7 +96,7 @@ const Modele2 = () => {
             ) : (
               <form
                 onSubmit={handleSubmit}
-                className="bg-card rounded-xl p-6 lg:p-8 shadow-[var(--shadow-card)] border border-border w-full max-w-lg space-y-4"
+                className="bg-card/95 backdrop-blur-sm rounded-xl p-6 lg:p-8 shadow-[var(--shadow-card)] border border-border w-full max-w-lg space-y-4"
               >
                 <div>
                   <label htmlFor="m2-name" className="block text-sm font-semibold text-foreground mb-1">
