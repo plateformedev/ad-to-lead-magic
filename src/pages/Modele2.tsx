@@ -108,7 +108,7 @@ const Modele2 = () => {
                 className="bg-card/95 backdrop-blur-sm rounded-xl p-6 lg:p-8 shadow-[var(--shadow-card)] border border-border w-full max-w-lg space-y-4"
               >
                 <div>
-                  <label htmlFor="m2-name" className="block text-sm font-semibold text-foreground mb-1">
+                  <label htmlFor="m2-name" className="block text-base font-semibold text-foreground mb-1">
                     Nom complet *
                   </label>
                   <input
