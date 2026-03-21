@@ -30,7 +30,7 @@ const Modele2 = () => {
   };
 
   return (
-    <div className="h-screen flex flex-col overflow-hidden">
+    <div className="h-screen relative overflow-hidden">
       {/* Header */}
       <div className="absolute top-0 left-0 right-0 z-20 py-3">
         <div className="container mx-auto px-4 flex items-center justify-between">
