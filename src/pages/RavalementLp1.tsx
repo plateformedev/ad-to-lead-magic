@@ -85,7 +85,7 @@ const Modele2 = () => {
             <div className="hidden lg:grid grid-cols-2 gap-x-8 gap-y-3 mb-6 animate-fade-up" style={{ animationDelay: "0.3s" }}>
               {[
                 { icon: Shield, label: "Garantie décennale" },
-                { icon: Users, label: "Professionnels qualifiés" },
+                { icon: Users, label: "Professionnels certifiés" },
                 { icon: Award, label: "+10 ans expérience" },
                 { icon: Hammer, label: "+100 chantiers" },
               ].map((item) => (
