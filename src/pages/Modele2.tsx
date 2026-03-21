@@ -99,7 +99,7 @@ const Modele2 = () => {
 
           {/* Right - Form */}
           <div className="lg:w-1/2 flex flex-col items-center justify-center w-full">
-            <div className="lg:hidden flex items-center gap-3 mb-3">
+            <div className="lg:hidden flex flex-col items-center gap-2 mb-3">
               <div className="inline-flex items-center gap-2 rounded-full bg-accent/90 px-4 py-1.5 text-sm font-semibold text-accent-foreground">
                 ⭐ Noté 4,8/5 sur Google
               </div>
