@@ -11,7 +11,7 @@ import certirenovLogo from "@/assets/certirenov-rge.png";
 
 const heroImages = [heroImg1, heroImg2, heroImg3, heroImg4, heroImg5];
 
-const timeSlots = ["8h", "10h", "12h", "14h", "16h", "18h", "20h"];
+const timeSlots = ["8h", "10h", "12h", "13h", "14h", "16h", "18h", "20h"];
 
 const RavalementLp2 = () => {
   const heroImage = useMemo(() => heroImages[Math.floor(Math.random() * heroImages.length)], []);
