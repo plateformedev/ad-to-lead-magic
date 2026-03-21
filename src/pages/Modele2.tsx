@@ -124,7 +124,7 @@ const Modele2 = () => {
 
                 <div className="grid grid-cols-2 gap-3">
                   <div>
-                    <label htmlFor="m2-email" className="block text-sm font-semibold text-foreground mb-1">
+                    <label htmlFor="m2-email" className="block text-base font-semibold text-foreground mb-1">
                       Email *
                     </label>
                     <input
