@@ -57,7 +57,7 @@ const Modele2 = () => {
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/50 to-black/30" />
         </div>
-        <div className="absolute inset-0 lg:hidden bg-muted" />
+        <div className="absolute inset-0 lg:hidden bg-black" />
 
         <div className="relative z-10 container mx-auto px-4 flex flex-col lg:flex-row items-center gap-6 lg:gap-12 py-6 lg:py-0 h-full pt-20 lg:pt-6">
           
@@ -69,12 +69,12 @@ const Modele2 = () => {
               ⭐ Noté 4,8/5 sur Google
             </div>
 
-            <h1 className="text-4xl lg:text-6xl font-extrabold leading-tight mb-4 animate-fade-up text-foreground lg:text-white" style={{ animationDelay: "0.1s" }}>
+            <h1 className="text-4xl lg:text-6xl font-extrabold leading-tight mb-4 animate-fade-up text-white" style={{ animationDelay: "0.1s" }}>
               Ravalement de façade<br />
               <span className="text-accent">à Paris & Île-de-France</span>
             </h1>
 
-            <p className="text-xl lg:text-2xl mb-8 max-w-lg animate-fade-up text-muted-foreground lg:text-white/85" style={{ animationDelay: "0.2s" }}>
+            <p className="text-xl lg:text-2xl mb-8 max-w-lg animate-fade-up text-white/85" style={{ animationDelay: "0.2s" }}>
               Spécialistes du bâti ancien et patrimonial.<br />
               Experts du ravalement de façade<br />
               pour maisons, immeubles et copropriétés.
@@ -219,7 +219,7 @@ const Modele2 = () => {
                 ].map((item) => (
                   <div key={item.label} className="flex items-center gap-2">
                     <item.icon className="w-5 h-5 text-accent flex-shrink-0" />
-                    <span className="text-sm font-semibold text-foreground">{item.label}</span>
+                    <span className="text-sm font-semibold text-white/90">{item.label}</span>
                   </div>
                 ))}
               </div>
@@ -231,7 +231,7 @@ const Modele2 = () => {
 
       {/* Bottom bar */}
       <div className="absolute bottom-0 left-0 right-0 z-20 py-2.5">
-        <div className="container mx-auto px-4 flex flex-wrap justify-center gap-6 text-sm text-muted-foreground lg:text-white/85">
+        <div className="container mx-auto px-4 flex flex-wrap justify-center gap-6 text-sm text-white/85">
           <span>© {new Date().getFullYear()} DSD Rénov</span>
           <a href="mailto:bonjour@dsdrenov.com" className="hover:text-white transition-colors">bonjour@dsdrenov.com</a>
           <a href="https://www.dsdrenov.com/politique-de-confidentialite/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Politique de confidentialité</a>
