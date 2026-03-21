@@ -23,6 +23,8 @@ const RavalementLp2 = () => {
     phone: "",
     message: "",
     rdvType: "",
+    address: "",
+    postalCode: "",
     date: "",
     time: "",
   });
@@ -256,6 +258,38 @@ const RavalementLp2 = () => {
                       </div>
                     </div>
 
+                    {formData.rdvType === "onsite" && (
+                      <div className="grid grid-cols-2 gap-3">
+                        <div>
+                          <label htmlFor="lp2-address" className="block text-base font-semibold text-foreground mb-1">
+                            Adresse *
+                          </label>
+                          <input
+                            id="lp2-address"
+                            type="text"
+                            required
+                            value={formData.address}
+                            onChange={(e) => setFormData({ ...formData, address: e.target.value })}
+                            className="w-full rounded-lg border border-input bg-background px-4 py-2.5 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+                            placeholder="12 rue de la Paix"
+                          />
+                        </div>
+                        <div>
+                          <label htmlFor="lp2-postalcode" className="block text-base font-semibold text-foreground mb-1">
+                            Code postal *
+                          </label>
+                          <input
+                            id="lp2-postalcode"
+                            type="text"
+                            required
+                            value={formData.postalCode}
+                            onChange={(e) => setFormData({ ...formData, postalCode: e.target.value })}
+                            className="w-full rounded-lg border border-input bg-background px-4 py-2.5 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+                            placeholder="75002"
+                          />
+                        </div>
+                      </div>
+                    )}
                     <div>
                       <label className="block text-base font-semibold text-foreground mb-2">
                         <Calendar className="w-4 h-4 inline mr-1.5 -mt-0.5" />
