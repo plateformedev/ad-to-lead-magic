@@ -58,9 +58,9 @@ const Modele2 = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/50 to-black/30" />
         </div>
 
-        <div className="relative z-10 container mx-auto px-4 flex flex-col lg:flex-row items-center gap-6 lg:gap-12 py-6 lg:py-0 h-full">
+        <div className="relative z-10 container mx-auto px-4 flex flex-col lg:flex-row items-center gap-6 lg:gap-12 py-6 lg:py-0 h-full pt-20">
           {/* Left - Hero content */}
-          <div className="lg:w-1/2 flex flex-col justify-center">
+          <div className="lg:w-1/2 flex flex-col justify-start">
 
 
 
