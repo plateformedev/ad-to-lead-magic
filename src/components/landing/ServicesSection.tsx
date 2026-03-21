@@ -1,5 +1,8 @@
 import { Building2, Paintbrush, Layers, Wrench } from "lucide-react";
-import beforeAfterImage from "@/assets/before-after.jpg";
+import ravalement2 from "@/assets/ravalement2.jpg";
+import ravalement3 from "@/assets/ravalement3.jpg";
+import ravalement4 from "@/assets/ravalement4.jpg";
+import ravalement5 from "@/assets/ravalement5.jpg";
 
 const services = [
   {
@@ -22,6 +25,13 @@ const services = [
     title: "Imperméabilisation",
     desc: "Traitement hydrofuge et anti-mousse pour protéger durablement votre façade.",
   },
+];
+
+const gallery = [
+  { src: ravalement5, alt: "Ravalement façade brique et enduit en Île-de-France" },
+  { src: ravalement3, alt: "Ravalement maison bourgeoise avec toiture ardoise" },
+  { src: ravalement2, alt: "Ravalement villa meulière avec toiture tuile" },
+  { src: ravalement4, alt: "Rénovation façade brique et boiseries" },
 ];
 
 const ServicesSection = () => (
@@ -51,17 +61,22 @@ const ServicesSection = () => (
         ))}
       </div>
 
-      <div className="rounded-xl overflow-hidden shadow-[var(--shadow-card)]">
-        <img
-          src={beforeAfterImage}
-          alt="Avant et après un ravalement de façade à Paris"
-          className="w-full h-auto object-cover max-h-[500px]"
-          loading="lazy"
-        />
-        <div className="bg-card p-4 text-center">
-          <p className="text-sm font-semibold text-muted-foreground">
-            Avant / Après — Ravalement d'un immeuble haussmannien, Paris 16e
-          </p>
+      {/* Gallery */}
+      <div>
+        <h3 className="text-2xl font-bold text-foreground text-center mb-8">
+          Nos réalisations récentes
+        </h3>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          {gallery.map((img, i) => (
+            <div key={i} className="rounded-xl overflow-hidden shadow-[var(--shadow-card)] group">
+              <img
+                src={img.src}
+                alt={img.alt}
+                className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              />
+            </div>
+          ))}
         </div>
       </div>
     </div>
