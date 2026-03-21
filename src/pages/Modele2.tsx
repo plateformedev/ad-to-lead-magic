@@ -60,12 +60,12 @@ const Modele2 = () => {
               ⭐ Noté 4.5/5 sur Google
             </div>
 
-            <h1 className="text-3xl lg:text-5xl font-extrabold leading-tight mb-4" style={{ color: "white" }}>
+            <h1 className="text-4xl lg:text-6xl font-extrabold leading-tight mb-4" style={{ color: "white" }}>
               Ravalement de façade<br />
               <span className="text-accent">à Paris & Île-de-France</span>
             </h1>
 
-            <p className="text-base lg:text-lg mb-5 max-w-md" style={{ color: "rgba(255,255,255,0.85)" }}>
+            <p className="text-lg lg:text-xl mb-5 max-w-md" style={{ color: "rgba(255,255,255,0.85)" }}>
               Spécialistes du bâti ancien. Devis gratuit sous 24h, garantie décennale, tarifs fermes.
             </p>
 
