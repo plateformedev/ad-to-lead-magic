@@ -83,7 +83,17 @@ const Modele2 = () => {
               ))}
             </div>
 
-            <img src={certirenovLogo} alt="CertiRénov RGE" className="h-20 w-auto object-contain mt-2 self-start animate-fade-up" style={{ animationDelay: "0.4s" }} />
+            <div className="flex items-center gap-6 mt-2 animate-fade-up" style={{ animationDelay: "0.4s" }}>
+              <img src={certirenovLogo} alt="CertiRénov RGE" className="h-20 w-auto object-contain" />
+              <div className="flex items-center gap-2">
+                <div className="flex gap-0.5">
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <Star key={i} className={`w-5 h-5 ${i < 4 ? "fill-accent text-accent" : "fill-accent/80 text-accent/80"}`} />
+                  ))}
+                </div>
+                <span className="text-lg font-bold" style={{ color: "rgba(255,255,255,0.9)" }}>4,8/5 sur Google</span>
+              </div>
+            </div>
           </div>
 
           {/* Right - Form */}
