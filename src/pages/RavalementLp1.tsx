@@ -220,7 +220,7 @@ const Modele2 = () => {
               <div className="grid grid-cols-2 gap-x-6 gap-y-2">
                 {[
                   { icon: Shield, label: "Garantie décennale" },
-                  { icon: Users, label: "Professionnels qualifiés" },
+                  { icon: Users, label: "Professionnels certifiés" },
                   { icon: Award, label: "+10 ans expérience" },
                   { icon: Hammer, label: "+100 chantiers" },
                 ].map((item) => (
