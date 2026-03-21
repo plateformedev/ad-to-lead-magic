@@ -65,7 +65,7 @@ const Modele2 = () => {
               <span className="text-accent">à Paris & Île-de-France</span>
             </h1>
 
-            <p className="text-lg lg:text-xl mb-5 max-w-md" style={{ color: "rgba(255,255,255,0.85)" }}>
+            <p className="text-lg lg:text-xl mb-8 max-w-md" style={{ color: "rgba(255,255,255,0.85)" }}>
               Spécialistes du bâti ancien. Devis gratuit sous 24h, garantie décennale, tarifs fermes.
             </p>
 
