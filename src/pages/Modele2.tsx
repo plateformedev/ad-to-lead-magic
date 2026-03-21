@@ -77,8 +77,8 @@ const Modele2 = () => {
                 { icon: ThumbsUp, label: "500+ chantiers" },
               ].map((item) => (
                 <div key={item.label} className="flex items-center gap-3">
-                  <item.icon className="w-6 h-6 text-accent flex-shrink-0" />
-                  <span className="text-base font-semibold" style={{ color: "rgba(255,255,255,0.9)" }}>{item.label}</span>
+                  <item.icon className="w-7 h-7 text-accent flex-shrink-0" />
+                  <span className="text-lg font-semibold" style={{ color: "rgba(255,255,255,0.9)" }}>{item.label}</span>
                 </div>
               ))}
             </div>
