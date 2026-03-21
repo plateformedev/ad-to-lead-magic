@@ -78,7 +78,7 @@ const Modele2 = () => {
                 { icon: Shield, label: "Garantie décennale" },
                 { icon: Clock, label: "Devis personnalisé" },
                 { icon: Award, label: "+10 ans expérience" },
-                { icon: ThumbsUp, label: "500+ chantiers" },
+                { icon: ThumbsUp, label: "+100 chantiers" },
               ].map((item) => (
                 <div key={item.label} className="flex items-center gap-3">
                   <item.icon className="w-7 h-7 text-accent flex-shrink-0" />
