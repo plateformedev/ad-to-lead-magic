@@ -258,32 +258,6 @@ const RavalementLp2 = () => {
                       ← Retour
                     </button>
 
-                    <div>
-                      <label className="block text-base font-semibold text-foreground mb-2">
-                        Comment souhaitez-vous être contacté ? *
-                      </label>
-                      <div className="grid grid-cols-3 gap-2">
-                        {[
-                          { value: "phone", label: "Par téléphone", icon: "📞" },
-                          { value: "visio", label: "Par visio", icon: "💻" },
-                          { value: "onsite", label: "Sur place", icon: "🏠" },
-                        ].map((option) => (
-                          <button
-                            key={option.value}
-                            type="button"
-                            onClick={() => setFormData({ ...formData, rdvType: option.value })}
-                            className={`flex flex-col items-center gap-1.5 rounded-lg border px-3 py-3 text-sm font-medium transition-all ${
-                              formData.rdvType === option.value
-                                ? "bg-primary border-primary text-primary-foreground"
-                                : "border-input bg-background text-foreground hover:border-ring"
-                            }`}
-                          >
-                            <span className="text-xl">{option.icon}</span>
-                            {option.label}
-                          </button>
-                        ))}
-                      </div>
-                    </div>
 
                     <div>
                       <label className="block text-base font-semibold text-foreground mb-2">
