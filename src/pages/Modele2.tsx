@@ -62,13 +62,9 @@ const Modele2 = () => {
           {/* Left - Hero content */}
           <div className="lg:w-1/2 flex flex-col justify-center">
 
-            <div className="flex items-center gap-4 mb-4 animate-fade-up" style={{ animationDelay: "0.05s" }}>
-              <div className="flex gap-0.5">
-                {Array.from({ length: 5 }).map((_, i) => (
-                  <Star key={i} className={`w-5 h-5 ${i < 4 ? "fill-accent text-accent" : "fill-accent/80 text-accent/80"}`} />
-                ))}
-              </div>
-              <span className="text-base font-bold" style={{ color: "rgba(255,255,255,0.9)" }}>4,8/5 avis Google</span>
+            <div className="inline-flex items-center gap-2 mb-4 animate-fade-up rounded-full px-5 py-2.5 border border-accent/40" style={{ background: "linear-gradient(135deg, hsl(var(--accent) / 0.25), hsl(var(--accent) / 0.10))", animationDelay: "0.05s" }}>
+              <Star className="w-5 h-5 fill-accent text-accent" />
+              <span className="text-base font-bold" style={{ color: "rgba(255,255,255,0.95)" }}>Noté 4,8/5 sur Google</span>
             </div>
 
             <h1 className="text-4xl lg:text-6xl font-extrabold leading-tight mb-4 animate-fade-up" style={{ color: "white", animationDelay: "0.1s" }}>
