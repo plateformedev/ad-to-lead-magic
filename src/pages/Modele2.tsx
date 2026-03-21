@@ -111,7 +111,7 @@ const Modele2 = () => {
               >
                 <div>
                   <label htmlFor="m2-name" className="block text-base font-semibold text-foreground mb-1">
-                    Nom complet *
+                    Nom *
                   </label>
                   <input
                     id="m2-name"
