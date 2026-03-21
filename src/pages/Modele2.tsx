@@ -58,7 +58,7 @@ const Modele2 = () => {
           {/* Left - Hero content */}
           <div className="lg:w-1/2 flex flex-col justify-center">
             <div className="inline-flex items-center gap-2 rounded-full bg-accent/90 px-4 py-1.5 text-sm font-semibold text-accent-foreground mb-4 w-fit animate-fade-up">
-              ⭐ Noté 4.5/5 sur Google
+              ⭐ Noté 4,8/5 sur Google
             </div>
 
             <h1 className="text-4xl lg:text-6xl font-extrabold leading-tight mb-4 animate-fade-up" style={{ color: "white", animationDelay: "0.1s" }}>
