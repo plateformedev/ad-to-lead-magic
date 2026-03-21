@@ -63,7 +63,7 @@ const Modele2 = () => {
           
 
           {/* Left - Hero content */}
-          <div className="lg:w-1/2 flex flex-col justify-center">
+          <div className="lg:w-1/2 flex flex-col justify-center text-center lg:text-left">
 
 
             <h1 className="text-4xl lg:text-6xl font-extrabold leading-tight mb-4 animate-fade-up text-white" style={{ animationDelay: "0.1s" }}>
@@ -71,7 +71,7 @@ const Modele2 = () => {
               <span className="text-accent">à Paris & Île-de-France</span>
             </h1>
 
-            <p className="text-xl lg:text-2xl mb-8 max-w-lg animate-fade-up text-white/85" style={{ animationDelay: "0.2s" }}>
+            <p className="text-xl lg:text-2xl mb-8 max-w-lg mx-auto lg:mx-0 animate-fade-up text-white/85" style={{ animationDelay: "0.2s" }}>
               Spécialistes du bâti ancien et patrimonial.<br />
               Experts du ravalement de façade<br />
               pour maisons, immeubles et copropriétés.
