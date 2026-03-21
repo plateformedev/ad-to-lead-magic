@@ -67,12 +67,12 @@ const Modele2 = () => {
               ⭐ Noté 4,8/5 sur Google
             </div>
 
-            <h1 className="text-4xl lg:text-6xl font-extrabold leading-tight mb-4 animate-fade-up" style={{ color: "white", animationDelay: "0.1s" }}>
+            <h1 className="text-4xl lg:text-6xl font-extrabold leading-tight mb-4 animate-fade-up text-foreground lg:text-white" style={{ animationDelay: "0.1s" }}>
               Ravalement de façade<br />
               <span className="text-accent">à Paris & Île-de-France</span>
             </h1>
 
-            <p className="text-xl lg:text-2xl mb-8 max-w-lg animate-fade-up" style={{ color: "rgba(255,255,255,0.85)", animationDelay: "0.2s" }}>
+            <p className="text-xl lg:text-2xl mb-8 max-w-lg animate-fade-up text-muted-foreground lg:text-white/85" style={{ animationDelay: "0.2s" }}>
               Spécialistes du bâti ancien et patrimonial.<br />
               Experts du ravalement de façade<br />
               pour maisons, immeubles et copropriétés.
@@ -87,7 +87,7 @@ const Modele2 = () => {
               ].map((item) => (
                 <div key={item.label} className="flex items-center gap-3">
                   <item.icon className="w-7 h-7 text-accent flex-shrink-0" />
-                  <span className="text-lg font-semibold" style={{ color: "rgba(255,255,255,0.9)" }}>{item.label}</span>
+                  <span className="text-lg font-semibold text-foreground lg:text-white/90">{item.label}</span>
                 </div>
               ))}
             </div>
