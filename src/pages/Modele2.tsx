@@ -97,7 +97,7 @@ const Modele2 = () => {
             {submitted ? (
               <div className="bg-card/95 backdrop-blur-sm rounded-xl p-8 shadow-[var(--shadow-card)] border border-border text-center max-w-md w-full">
                 <CheckCircle2 className="w-14 h-14 text-trust mx-auto mb-4" />
-                <h2 className="text-2xl font-bold text-foreground mb-3">Demande envoyée !</h2>
+                <h2 className="text-3xl font-bold text-foreground mb-3">Demande envoyée !</h2>
                 <p className="text-muted-foreground">
                   Merci {formData.name}, nous vous recontactons sous 24h.
                 </p>
