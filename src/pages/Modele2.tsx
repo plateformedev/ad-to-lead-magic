@@ -158,7 +158,7 @@ const Modele2 = () => {
                 <div>
                   <label className="block text-base font-semibold text-foreground mb-1.5">Délai souhaité</label>
                   <div className="flex gap-2">
-                    {["Urgent", "1 - 6 mois", "+6 mois"].map((option) => (
+                    {["Urgent", "1 - 6 mois", "> 6 mois"].map((option) => (
                       <button
                         key={option}
                         type="button"
