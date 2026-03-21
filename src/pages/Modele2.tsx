@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Phone, CheckCircle2, Shield, Clock, Award, ThumbsUp } from "lucide-react";
+import { Phone, CheckCircle2, Shield, Clock, Award, ThumbsUp, Star } from "lucide-react";
 import { toast } from "sonner";
 import heroImage from "@/assets/ravalement1.jpg";
 import logoDsd from "@/assets/logo-dsd.png";
