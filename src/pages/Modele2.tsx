@@ -189,7 +189,7 @@ const Modele2 = () => {
 
                 <button
                   type="submit"
-                  className="w-full rounded-lg bg-primary px-6 py-3.5 text-base font-bold text-primary-foreground shadow-[var(--shadow-cta)] hover:brightness-110 transition-all"
+                  className="w-full rounded-lg bg-primary px-6 py-3.5 text-lg font-bold text-primary-foreground shadow-[var(--shadow-cta)] hover:brightness-110 transition-all"
                 >
                   Recevoir mon devis gratuit →
                 </button>
