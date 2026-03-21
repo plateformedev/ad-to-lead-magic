@@ -89,13 +89,8 @@ const Modele2 = () => {
 
             <div className="flex items-center gap-6 mt-2 animate-fade-up" style={{ animationDelay: "0.4s" }}>
               <img src={certirenovLogo} alt="CertiRénov RGE" className="h-20 w-auto object-contain" />
-              <div className="flex flex-col items-start">
-                <div className="flex gap-0.5">
-                  {Array.from({ length: 5 }).map((_, i) => (
-                    <Star key={i} className={`w-5 h-5 ${i < 4 ? "fill-accent text-accent" : "fill-accent/80 text-accent/80"}`} />
-                  ))}
-                </div>
-                <span className="text-base font-bold mt-1" style={{ color: "rgba(255,255,255,0.9)" }}>4,8/5 avis Google</span>
+              <div className="inline-flex items-center gap-2 rounded-full bg-accent/90 px-4 py-1.5 text-sm font-semibold text-accent-foreground">
+                ⭐ Noté 4,8/5 sur Google
               </div>
             </div>
           </div>
