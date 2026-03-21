@@ -57,20 +57,20 @@ const Modele2 = () => {
         <div className="relative z-10 container mx-auto px-4 flex flex-col lg:flex-row items-center gap-6 lg:gap-12 py-6 lg:py-0 h-full">
           {/* Left - Hero content */}
           <div className="lg:w-1/2 flex flex-col justify-center">
-            <div className="inline-flex items-center gap-2 rounded-full bg-accent/90 px-4 py-1.5 text-sm font-semibold text-accent-foreground mb-4 w-fit">
+            <div className="inline-flex items-center gap-2 rounded-full bg-accent/90 px-4 py-1.5 text-sm font-semibold text-accent-foreground mb-4 w-fit animate-fade-up">
               ⭐ Noté 4.5/5 sur Google
             </div>
 
-            <h1 className="text-4xl lg:text-6xl font-extrabold leading-tight mb-4" style={{ color: "white" }}>
+            <h1 className="text-4xl lg:text-6xl font-extrabold leading-tight mb-4 animate-fade-up" style={{ color: "white", animationDelay: "0.1s" }}>
               Ravalement de façade<br />
               <span className="text-accent">à Paris & Île-de-France</span>
             </h1>
 
-            <p className="text-lg lg:text-xl mb-8 max-w-md" style={{ color: "rgba(255,255,255,0.85)" }}>
+            <p className="text-lg lg:text-xl mb-8 max-w-md animate-fade-up" style={{ color: "rgba(255,255,255,0.85)", animationDelay: "0.2s" }}>
               Spécialistes du bâti ancien. Devis gratuit sous 24h, garantie décennale, tarifs fermes.
             </p>
 
-            <div className="grid grid-cols-2 gap-x-8 gap-y-3 mb-6">
+            <div className="grid grid-cols-2 gap-x-8 gap-y-3 mb-6 animate-fade-up" style={{ animationDelay: "0.3s" }}>
               {[
                 { icon: Shield, label: "Garantie décennale" },
                 { icon: Clock, label: "Devis personnalisé" },
@@ -84,7 +84,7 @@ const Modele2 = () => {
               ))}
             </div>
 
-            <img src={certirenovLogo} alt="CertiRénov RGE" className="h-20 w-auto object-contain mt-2 self-start" />
+            <img src={certirenovLogo} alt="CertiRénov RGE" className="h-20 w-auto object-contain mt-2 self-start animate-fade-up" style={{ animationDelay: "0.4s" }} />
           </div>
 
           {/* Right - Form */}
