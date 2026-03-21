@@ -1,5 +1,5 @@
 import { Phone } from "lucide-react";
-import heroImage from "@/assets/hero-ravalement.jpg";
+import heroImage from "@/assets/ravalement1.jpg";
 
 const HeroSection = () => {
   const scrollToForm = () => {
