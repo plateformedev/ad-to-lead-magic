@@ -14,6 +14,7 @@ const heroImages = [heroImg1, heroImg2, heroImg3, heroImg4, heroImg5];
 const RavalementLp3 = () => {
   const heroImage = useMemo(() => heroImages[Math.floor(Math.random() * heroImages.length)], []);
   const [submitted, setSubmitted] = useState(false);
+  const [step, setStep] = useState<1 | 2>(1);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -24,6 +25,10 @@ const RavalementLp3 = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    if (step === 1) {
+      setStep(2);
+      return;
+    }
     setSubmitted(true);
     toast.success("Votre demande de devis a bien été envoyée !");
   };
@@ -105,22 +110,37 @@ const RavalementLp3 = () => {
                 onSubmit={handleSubmit}
                 className="bg-card/95 backdrop-blur-sm rounded-xl p-6 lg:p-8 shadow-[var(--shadow-card)] border border-border w-full space-y-4 min-h-[420px] flex flex-col justify-start"
               >
-                <div>
-                  <label htmlFor="lp3-email" className="block text-base font-semibold text-foreground mb-1">
-                    Sur quelle adresse e-mail souhaitez-vous recevoir votre devis ? *
-                  </label>
-                  <input
-                    id="lp3-email"
-                    type="email"
-                    required
-                    value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full rounded-lg border border-input bg-background px-4 py-2.5 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
-                    placeholder="jean@email.com"
-                  />
-                </div>
+                {step === 1 ? (
+                  <>
+                    <div>
+                      <label htmlFor="lp3-email" className="block text-base font-semibold text-foreground mb-1">
+                        Sur quelle adresse e-mail souhaitez-vous recevoir votre devis ? *
+                      </label>
+                      <input
+                        id="lp3-email"
+                        type="email"
+                        required
+                        value={formData.email}
+                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                        className="w-full rounded-lg border border-input bg-background px-4 py-2.5 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+                        placeholder="jean@email.com"
+                      />
+                    </div>
 
-                {formData.email.trim().length > 0 && (
+                    {formData.email.trim().length > 0 && (
+                      <button
+                        type="submit"
+                        className="w-full rounded-lg bg-primary px-6 py-3.5 text-lg font-bold text-primary-foreground shadow-[var(--shadow-cta)] hover:brightness-110 transition-all"
+                      >
+                        Continuer →
+                      </button>
+                    )}
+
+                    <p className="text-sm text-muted-foreground text-center">
+                      Sans engagement · Conseils d'experts
+                    </p>
+                  </>
+                ) : (
                   <>
                     <div>
                       <label htmlFor="lp3-name" className="block text-base font-semibold text-foreground mb-1">
@@ -137,19 +157,35 @@ const RavalementLp3 = () => {
                       />
                     </div>
 
-                    <div>
-                      <label htmlFor="lp3-phone" className="block text-base font-semibold text-foreground mb-1">
-                        Téléphone *
-                      </label>
-                      <input
-                        id="lp3-phone"
-                        type="tel"
-                        required
-                        value={formData.phone}
-                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        className="w-full rounded-lg border border-input bg-background px-4 py-2.5 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
-                        placeholder="06 12 34 56 78"
-                      />
+                    <div className="grid grid-cols-2 gap-3">
+                      <div>
+                        <label htmlFor="lp3-email-s2" className="block text-base font-semibold text-foreground mb-1">
+                          E-mail *
+                        </label>
+                        <input
+                          id="lp3-email-s2"
+                          type="email"
+                          required
+                          value={formData.email}
+                          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                          className="w-full rounded-lg border border-input bg-background px-4 py-2.5 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+                          placeholder="jean@email.com"
+                        />
+                      </div>
+                      <div>
+                        <label htmlFor="lp3-phone" className="block text-base font-semibold text-foreground mb-1">
+                          Téléphone *
+                        </label>
+                        <input
+                          id="lp3-phone"
+                          type="tel"
+                          required
+                          value={formData.phone}
+                          onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                          className="w-full rounded-lg border border-input bg-background px-4 py-2.5 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+                          placeholder="06 12 34 56 78"
+                        />
+                      </div>
                     </div>
 
                     <div>
@@ -192,12 +228,12 @@ const RavalementLp3 = () => {
                     >
                       Recevoir mon devis gratuit →
                     </button>
+
+                    <p className="text-sm text-muted-foreground text-center">
+                      Sans engagement · Conseils d'experts
+                    </p>
                   </>
                 )}
-
-                <p className="text-sm text-muted-foreground text-center">
-                  Sans engagement · Conseils d'experts
-                </p>
               </form>
             )}
 
