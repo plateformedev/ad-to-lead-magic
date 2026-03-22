@@ -163,74 +163,78 @@ const RavalementLp2 = () => {
                       />
                     </div>
 
-                    <div className="grid grid-cols-2 gap-3">
-                      <div>
-                        <label htmlFor="lp2-email-s1" className="block text-base font-semibold text-foreground mb-1">
-                          E-mail *
-                        </label>
-                        <input
-                          id="lp2-email-s1"
-                          type="email"
-                          required
-                          value={formData.email}
-                          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                          className="w-full rounded-lg border border-input bg-background px-4 py-2.5 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
-                          placeholder="jean@email.com"
-                        />
-                      </div>
-                      <div>
-                        <label htmlFor="lp2-phone-s1" className="block text-base font-semibold text-foreground mb-1">
-                          Téléphone *
-                        </label>
-                        <input
-                          id="lp2-phone-s1"
-                          type="tel"
-                          required
-                          value={formData.phone}
-                          onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                          className="w-full rounded-lg border border-input bg-background px-4 py-2.5 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
-                          placeholder="06 12 34 56 78"
-                        />
-                      </div>
-                    </div>
+                    {formData.message.trim().length > 0 && (
+                      <>
+                        <div className="grid grid-cols-2 gap-3">
+                          <div>
+                            <label htmlFor="lp2-email-s1" className="block text-base font-semibold text-foreground mb-1">
+                              E-mail *
+                            </label>
+                            <input
+                              id="lp2-email-s1"
+                              type="email"
+                              required
+                              value={formData.email}
+                              onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                              className="w-full rounded-lg border border-input bg-background px-4 py-2.5 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+                              placeholder="jean@email.com"
+                            />
+                          </div>
+                          <div>
+                            <label htmlFor="lp2-phone-s1" className="block text-base font-semibold text-foreground mb-1">
+                              Téléphone *
+                            </label>
+                            <input
+                              id="lp2-phone-s1"
+                              type="tel"
+                              required
+                              value={formData.phone}
+                              onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                              className="w-full rounded-lg border border-input bg-background px-4 py-2.5 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+                              placeholder="06 12 34 56 78"
+                            />
+                          </div>
+                        </div>
 
-                    <div>
-                      <label className="block text-base font-semibold text-foreground mb-2">
-                        Comment souhaitez-vous être contacté ? *
-                      </label>
-                      <div className="grid grid-cols-3 gap-2">
-                        {[
-                          { value: "phone", label: "Par téléphone", icon: "📞" },
-                          { value: "visio", label: "Par visio", icon: "💻" },
-                          { value: "onsite", label: "Sur place", icon: "🏠" },
-                        ].map((option) => (
-                          <button
-                            key={option.value}
-                            type="button"
-                            onClick={() => setFormData({ ...formData, rdvType: option.value })}
-                            className={`flex flex-col items-center gap-1.5 rounded-lg border px-3 py-3 text-sm font-medium transition-all ${
-                              formData.rdvType === option.value
-                                ? "bg-primary border-primary text-primary-foreground"
-                                : "border-input bg-background text-foreground hover:border-ring"
-                            }`}
-                          >
-                            <span className="text-xl">{option.icon}</span>
-                            {option.label}
-                          </button>
-                        ))}
-                      </div>
-                    </div>
+                        <div>
+                          <label className="block text-base font-semibold text-foreground mb-2">
+                            Comment souhaitez-vous être contacté ? *
+                          </label>
+                          <div className="grid grid-cols-3 gap-2">
+                            {[
+                              { value: "phone", label: "Par téléphone", icon: "📞" },
+                              { value: "visio", label: "Par visio", icon: "💻" },
+                              { value: "onsite", label: "Sur place", icon: "🏠" },
+                            ].map((option) => (
+                              <button
+                                key={option.value}
+                                type="button"
+                                onClick={() => setFormData({ ...formData, rdvType: option.value })}
+                                className={`flex flex-col items-center gap-1.5 rounded-lg border px-3 py-3 text-sm font-medium transition-all ${
+                                  formData.rdvType === option.value
+                                    ? "bg-primary border-primary text-primary-foreground"
+                                    : "border-input bg-background text-foreground hover:border-ring"
+                                }`}
+                              >
+                                <span className="text-xl">{option.icon}</span>
+                                {option.label}
+                              </button>
+                            ))}
+                          </div>
+                        </div>
 
-                    <button
-                      type="submit"
-                      className="w-full rounded-lg bg-primary px-6 py-3.5 text-lg font-bold text-primary-foreground shadow-[var(--shadow-cta)] hover:brightness-110 transition-all"
-                    >
-                      Continuer →
-                    </button>
+                        <button
+                          type="submit"
+                          className="w-full rounded-lg bg-primary px-6 py-3.5 text-lg font-bold text-primary-foreground shadow-[var(--shadow-cta)] hover:brightness-110 transition-all"
+                        >
+                          Continuer →
+                        </button>
 
-                    <p className="text-sm text-muted-foreground text-center">
-                      Sans engagement · Conseils d'experts
-                    </p>
+                        <p className="text-sm text-muted-foreground text-center">
+                          Sans engagement · Conseils d'experts
+                        </p>
+                      </>
+                    )}
                   </>
                 ) : (
                   <>
