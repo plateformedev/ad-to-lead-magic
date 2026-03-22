@@ -13,7 +13,7 @@ const heroImages = [heroImg1, heroImg2, heroImg3, heroImg4, heroImg5];
 
 const timeSlots = ["8h", "10h", "12h", "13h", "14h", "16h", "18h", "20h"];
 
-const RavalementLp2 = () => {
+const RavalementLp3 = () => {
   const heroImage = useMemo(() => heroImages[Math.floor(Math.random() * heroImages.length)], []);
   const [submitted, setSubmitted] = useState(false);
   const [step, setStep] = useState<1 | 2>(1);
@@ -389,4 +389,4 @@ const RavalementLp2 = () => {
   );
 };
 
-export default RavalementLp2;
+export default RavalementLp3;
