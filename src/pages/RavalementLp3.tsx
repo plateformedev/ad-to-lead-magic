@@ -114,7 +114,7 @@ const RavalementLp3 = () => {
                   <>
                     <div>
                       <label htmlFor="lp3-email" className="block text-base font-semibold text-foreground mb-1">
-                        Sur quelle adresse e-mail souhaitez-vous recevoir votre devis ? *
+                        Quelle est votre adresse e-mail ? *
                       </label>
                       <input
                         id="lp3-email"
