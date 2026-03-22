@@ -226,9 +226,7 @@ const RavalementLp3 = () => {
                       Recevoir mon devis gratuit →
                     </button>
 
-                    <p className="text-sm text-muted-foreground text-center">
-                      Sans engagement · Conseils d'experts
-                    </p>
+
                   </>
                 )}
               </form>
