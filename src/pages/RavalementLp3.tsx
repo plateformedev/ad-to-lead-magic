@@ -1,5 +1,5 @@
 import { useState, useMemo } from "react";
-import { CheckCircle2, Shield, Users, Award, Hammer, Calendar, Clock } from "lucide-react";
+import { CheckCircle2, Shield, Users, Award, Hammer } from "lucide-react";
 import { toast } from "sonner";
 import heroImg1 from "@/assets/ravalement1-2.jpg";
 import heroImg2 from "@/assets/ravalement2-2.jpg";
@@ -11,8 +11,6 @@ import certirenovLogo from "@/assets/certirenov-rge.png";
 
 const heroImages = [heroImg1, heroImg2, heroImg3, heroImg4, heroImg5];
 
-const timeSlots = ["8h", "10h", "12h", "13h", "14h", "16h", "18h", "20h"];
-
 const RavalementLp3 = () => {
   const heroImage = useMemo(() => heroImages[Math.floor(Math.random() * heroImages.length)], []);
   const [submitted, setSubmitted] = useState(false);
@@ -21,12 +19,8 @@ const RavalementLp3 = () => {
     name: "",
     email: "",
     phone: "",
+    delai: "",
     message: "",
-    rdvType: "",
-    address: "",
-    postalCode: "",
-    date: "",
-    time: "",
   });
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -35,19 +29,9 @@ const RavalementLp3 = () => {
       setStep(2);
       return;
     }
-    if (!formData.rdvType || !formData.date || !formData.time) {
-      toast.error("Veuillez compléter tous les champs du rendez-vous.");
-      return;
-    }
     setSubmitted(true);
-    toast.success("Votre rendez-vous a bien été demandé !");
+    toast.success("Votre demande de devis a bien été envoyée !");
   };
-
-  // Generate next 14 available days (excluding Sundays)
-  const availableDates = useMemo(() => {
-    const dates: string[] = [];
-    const today = new Date();
-    let d = new Date(today);
     d.setDate(d.getDate() + 1);
     while (dates.length < 14) {
       if (d.getDay() !== 0) {
