@@ -32,22 +32,6 @@ const RavalementLp3 = () => {
     setSubmitted(true);
     toast.success("Votre demande de devis a bien été envoyée !");
   };
-    d.setDate(d.getDate() + 1);
-    while (dates.length < 14) {
-      if (d.getDay() !== 0) {
-        dates.push(d.toISOString().split("T")[0]);
-      }
-      d.setDate(d.getDate() + 1);
-    }
-    return dates;
-  }, []);
-
-  const formatDateLabel = (dateStr: string) => {
-    const d = new Date(dateStr + "T12:00:00");
-    const days = ["Dim", "Lun", "Mar", "Mer", "Jeu", "Ven", "Sam"];
-    const months = ["jan", "fév", "mar", "avr", "mai", "juin", "juil", "août", "sep", "oct", "nov", "déc"];
-    return `${days[d.getDay()]} ${d.getDate()} ${months[d.getMonth()]}`;
-  };
 
   return (
     <div className="h-screen relative overflow-hidden">
