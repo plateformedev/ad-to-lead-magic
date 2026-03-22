@@ -149,51 +149,50 @@ const RavalementLp3 = () => {
                 {step === 1 ? (
                   <>
                     <div>
-                      <label htmlFor="lp2-message" className="block text-base font-semibold text-foreground mb-1">
-                        Décrivez votre projet *
+                      <label htmlFor="lp3-email-s1" className="block text-base font-semibold text-foreground mb-1">
+                        Sur quelle adresse e-mail souhaitez-vous recevoir votre devis ? *
                       </label>
-                      <textarea
-                        id="lp2-message"
-                        rows={4}
+                      <input
+                        id="lp3-email-s1"
+                        type="email"
                         required
-                        value={formData.message}
-                        onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                        className="w-full rounded-lg border border-input bg-background px-4 py-2.5 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-none"
-                        placeholder="Surface, type de bâtiment, travaux souhaités..."
+                        value={formData.email}
+                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                        className="w-full rounded-lg border border-input bg-background px-4 py-2.5 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+                        placeholder="jean@email.com"
                       />
                     </div>
 
-                    {formData.message.trim().length > 0 && (
+                    {formData.email.trim().length > 0 && (
                       <>
-                        <div className="grid grid-cols-2 gap-3">
-                          <div>
-                            <label htmlFor="lp2-email-s1" className="block text-base font-semibold text-foreground mb-1">
-                              E-mail *
-                            </label>
-                            <input
-                              id="lp2-email-s1"
-                              type="email"
-                              required
-                              value={formData.email}
-                              onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                              className="w-full rounded-lg border border-input bg-background px-4 py-2.5 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
-                              placeholder="jean@email.com"
-                            />
-                          </div>
-                          <div>
-                            <label htmlFor="lp2-phone-s1" className="block text-base font-semibold text-foreground mb-1">
-                              Téléphone *
-                            </label>
-                            <input
-                              id="lp2-phone-s1"
-                              type="tel"
-                              required
-                              value={formData.phone}
-                              onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                              className="w-full rounded-lg border border-input bg-background px-4 py-2.5 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
-                              placeholder="06 12 34 56 78"
-                            />
-                          </div>
+                        <div>
+                          <label htmlFor="lp3-message" className="block text-base font-semibold text-foreground mb-1">
+                            Décrivez votre projet *
+                          </label>
+                          <textarea
+                            id="lp3-message"
+                            rows={4}
+                            required
+                            value={formData.message}
+                            onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                            className="w-full rounded-lg border border-input bg-background px-4 py-2.5 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-none"
+                            placeholder="Surface, type de bâtiment, travaux souhaités..."
+                          />
+                        </div>
+
+                        <div>
+                          <label htmlFor="lp3-phone-s1" className="block text-base font-semibold text-foreground mb-1">
+                            Téléphone *
+                          </label>
+                          <input
+                            id="lp3-phone-s1"
+                            type="tel"
+                            required
+                            value={formData.phone}
+                            onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                            className="w-full rounded-lg border border-input bg-background px-4 py-2.5 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+                            placeholder="06 12 34 56 78"
+                          />
                         </div>
 
                         <div>
