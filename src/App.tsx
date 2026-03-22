@@ -6,6 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import Index from "./pages/Index.tsx";
 import RavalementLp1 from "./pages/RavalementLp1.tsx";
 import RavalementLp2 from "./pages/RavalementLp2.tsx";
+import RavalementLp3 from "./pages/RavalementLp3.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -20,6 +21,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/ravalement-lp" element={<RavalementLp1 />} />
           <Route path="/ravalement-lp2" element={<RavalementLp2 />} />
+          <Route path="/ravalement-lp3" element={<RavalementLp3 />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
