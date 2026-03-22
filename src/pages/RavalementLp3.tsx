@@ -135,9 +135,7 @@ const RavalementLp3 = () => {
                       Continuer →
                     </button>
 
-                    <p className="text-sm text-muted-foreground text-center">
-                      Sans engagement · Conseils d'experts
-                    </p>
+
                   </>
                 ) : (
                   <>
