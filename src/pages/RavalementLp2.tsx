@@ -230,9 +230,7 @@ const RavalementLp2 = () => {
                           Continuer →
                         </button>
 
-                        <p className="text-sm text-muted-foreground text-center">
-                          Sans engagement · Conseils d'experts
-                        </p>
+
                       </>
                     )}
                   </>
@@ -347,9 +345,7 @@ const RavalementLp2 = () => {
                       Confirmer mon rendez-vous →
                     </button>
 
-                    <p className="text-sm text-muted-foreground text-center">
-                      Sans engagement · Conseils d'experts
-                    </p>
+
                   </>
                 )}
               </form>
