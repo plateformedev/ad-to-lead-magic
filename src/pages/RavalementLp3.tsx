@@ -113,7 +113,7 @@ const RavalementLp3 = () => {
                 {step === 1 ? (
                   <>
                     <h2 className="text-2xl font-bold text-foreground text-center">Devis ravalement</h2>
-                    <p className="text-sm text-muted-foreground text-center -mt-2">Recevez un devis personnalisé pour réaliser votre ravalement de façade.</p>
+                    <p className="text-base text-muted-foreground text-center -mt-2">Recevez un devis personnalisé pour réaliser votre ravalement de façade.</p>
                     <div>
                       <label htmlFor="lp3-email" className="block text-base font-semibold text-foreground mb-1">
                         Votre e-mail *
