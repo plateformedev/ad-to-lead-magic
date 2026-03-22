@@ -1,5 +1,5 @@
 import { useState, useMemo } from "react";
-import { CheckCircle2, Shield, Users, Award, Hammer, Calendar, Clock } from "lucide-react";
+import { CheckCircle2, Shield, Users, Award, Hammer } from "lucide-react";
 import { toast } from "sonner";
 import heroImg1 from "@/assets/ravalement1-2.jpg";
 import heroImg2 from "@/assets/ravalement2-2.jpg";
@@ -11,8 +11,6 @@ import certirenovLogo from "@/assets/certirenov-rge.png";
 
 const heroImages = [heroImg1, heroImg2, heroImg3, heroImg4, heroImg5];
 
-const timeSlots = ["8h", "10h", "12h", "13h", "14h", "16h", "18h", "20h"];
-
 const RavalementLp3 = () => {
   const heroImage = useMemo(() => heroImages[Math.floor(Math.random() * heroImages.length)], []);
   const [submitted, setSubmitted] = useState(false);
@@ -21,12 +19,8 @@ const RavalementLp3 = () => {
     name: "",
     email: "",
     phone: "",
+    delai: "",
     message: "",
-    rdvType: "",
-    address: "",
-    postalCode: "",
-    date: "",
-    time: "",
   });
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -35,34 +29,8 @@ const RavalementLp3 = () => {
       setStep(2);
       return;
     }
-    if (!formData.rdvType || !formData.date || !formData.time) {
-      toast.error("Veuillez compléter tous les champs du rendez-vous.");
-      return;
-    }
     setSubmitted(true);
-    toast.success("Votre rendez-vous a bien été demandé !");
-  };
-
-  // Generate next 14 available days (excluding Sundays)
-  const availableDates = useMemo(() => {
-    const dates: string[] = [];
-    const today = new Date();
-    let d = new Date(today);
-    d.setDate(d.getDate() + 1);
-    while (dates.length < 14) {
-      if (d.getDay() !== 0) {
-        dates.push(d.toISOString().split("T")[0]);
-      }
-      d.setDate(d.getDate() + 1);
-    }
-    return dates;
-  }, []);
-
-  const formatDateLabel = (dateStr: string) => {
-    const d = new Date(dateStr + "T12:00:00");
-    const days = ["Dim", "Lun", "Mar", "Mer", "Jeu", "Ven", "Sam"];
-    const months = ["jan", "fév", "mar", "avr", "mai", "juin", "juil", "août", "sep", "oct", "nov", "déc"];
-    return `${days[d.getDay()]} ${d.getDate()} ${months[d.getMonth()]}`;
+    toast.success("Votre demande de devis a bien été envoyée !");
   };
 
   return (
@@ -132,14 +100,10 @@ const RavalementLp3 = () => {
             {submitted ? (
               <div className="bg-card/95 backdrop-blur-sm rounded-xl p-8 shadow-[var(--shadow-card)] border border-border text-center max-w-md w-full">
                 <CheckCircle2 className="w-14 h-14 text-trust mx-auto mb-4" />
-                <h2 className="text-3xl font-bold text-foreground mb-3">Rendez-vous demandé !</h2>
+                <h2 className="text-3xl font-bold text-foreground mb-3">Demande envoyée !</h2>
                 <p className="text-muted-foreground">
                   Merci {formData.name}. Nous vous recontacterons rapidement.
                 </p>
-                <div className="mt-4 p-3 bg-secondary rounded-lg text-sm text-foreground">
-                  <p className="font-semibold">{formData.rdvType === "phone" ? "Par téléphone" : formData.rdvType === "visio" ? "Par visio" : "Sur place"}</p>
-                  <p>{formatDateLabel(formData.date)} à {formData.time}</p>
-                </div>
               </div>
             ) : (
               <form
@@ -164,80 +128,20 @@ const RavalementLp3 = () => {
                     </div>
 
                     {formData.email.trim().length > 0 && (
-                      <>
-                        <div>
-                          <label htmlFor="lp3-message" className="block text-base font-semibold text-foreground mb-1">
-                            Décrivez votre projet *
-                          </label>
-                          <textarea
-                            id="lp3-message"
-                            rows={4}
-                            required
-                            value={formData.message}
-                            onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                            className="w-full rounded-lg border border-input bg-background px-4 py-2.5 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-none"
-                            placeholder="Surface, type de bâtiment, travaux souhaités..."
-                          />
-                        </div>
-
-                        <div>
-                          <label htmlFor="lp3-phone-s1" className="block text-base font-semibold text-foreground mb-1">
-                            Téléphone *
-                          </label>
-                          <input
-                            id="lp3-phone-s1"
-                            type="tel"
-                            required
-                            value={formData.phone}
-                            onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                            className="w-full rounded-lg border border-input bg-background px-4 py-2.5 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
-                            placeholder="06 12 34 56 78"
-                          />
-                        </div>
-
-                        <div>
-                          <label className="block text-base font-semibold text-foreground mb-2">
-                            Comment souhaitez-vous être contacté ? *
-                          </label>
-                          <div className="grid grid-cols-3 gap-2">
-                            {[
-                              { value: "phone", label: "Par téléphone", icon: "📞" },
-                              { value: "visio", label: "Par visio", icon: "💻" },
-                              { value: "onsite", label: "Sur place", icon: "🏠" },
-                            ].map((option) => (
-                              <button
-                                key={option.value}
-                                type="button"
-                                onClick={() => setFormData({ ...formData, rdvType: option.value })}
-                                className={`flex flex-col items-center gap-1.5 rounded-lg border px-3 py-3 text-sm font-medium transition-all ${
-                                  formData.rdvType === option.value
-                                    ? "bg-primary border-primary text-primary-foreground"
-                                    : "border-input bg-background text-foreground hover:border-ring"
-                                }`}
-                              >
-                                <span className="text-xl">{option.icon}</span>
-                                {option.label}
-                              </button>
-                            ))}
-                          </div>
-                        </div>
-
-                        <button
-                          type="submit"
-                          className="w-full rounded-lg bg-primary px-6 py-3.5 text-lg font-bold text-primary-foreground shadow-[var(--shadow-cta)] hover:brightness-110 transition-all"
-                        >
-                          Continuer →
-                        </button>
-
-                        <p className="text-sm text-muted-foreground text-center">
-                          Sans engagement · Conseils d'experts
-                        </p>
-                      </>
+                      <button
+                        type="submit"
+                        className="w-full rounded-lg bg-primary px-6 py-3.5 text-lg font-bold text-primary-foreground shadow-[var(--shadow-cta)] hover:brightness-110 transition-all"
+                      >
+                        Continuer →
+                      </button>
                     )}
+
+                    <p className="text-sm text-muted-foreground text-center">
+                      Sans engagement · Conseils d'experts
+                    </p>
                   </>
                 ) : (
                   <>
-                    {/* Step 2: Contact info + date/time */}
                     <button
                       type="button"
                       onClick={() => setStep(1)}
@@ -246,104 +150,91 @@ const RavalementLp3 = () => {
                       ← Retour
                     </button>
 
+                    <div>
+                      <label htmlFor="lp3-name" className="block text-base font-semibold text-foreground mb-1">
+                        Nom complet *
+                      </label>
+                      <input
+                        id="lp3-name"
+                        type="text"
+                        required
+                        value={formData.name}
+                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                        className="w-full rounded-lg border border-input bg-background px-4 py-2.5 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+                        placeholder="Jean Dupont"
+                      />
+                    </div>
+
                     <div className="grid grid-cols-2 gap-3">
                       <div>
-                        <label htmlFor="lp2-name" className="block text-base font-semibold text-foreground mb-1">
-                          Nom complet *
+                        <label htmlFor="lp3-email-s2" className="block text-base font-semibold text-foreground mb-1">
+                          E-mail *
                         </label>
                         <input
-                          id="lp2-name"
-                          type="text"
+                          id="lp3-email-s2"
+                          type="email"
                           required
-                          value={formData.name}
-                          onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                          value={formData.email}
+                          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                           className="w-full rounded-lg border border-input bg-background px-4 py-2.5 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
-                          placeholder="Jean Dupont"
+                          placeholder="jean@email.com"
                         />
                       </div>
                       <div>
-                        <label htmlFor="lp2-postalcode2" className="block text-base font-semibold text-foreground mb-1">
-                          Code postal *
+                        <label htmlFor="lp3-phone" className="block text-base font-semibold text-foreground mb-1">
+                          Téléphone *
                         </label>
                         <input
-                          id="lp2-postalcode2"
-                          type="text"
+                          id="lp3-phone"
+                          type="tel"
                           required
-                          value={formData.postalCode}
-                          onChange={(e) => setFormData({ ...formData, postalCode: e.target.value })}
+                          value={formData.phone}
+                          onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                           className="w-full rounded-lg border border-input bg-background px-4 py-2.5 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
-                          placeholder="75002"
+                          placeholder="06 12 34 56 78"
                         />
                       </div>
                     </div>
 
-                    {formData.rdvType === "onsite" && (
-                      <div>
-                        <label htmlFor="lp2-address" className="block text-base font-semibold text-foreground mb-1">
-                          Adresse *
-                        </label>
-                        <input
-                          id="lp2-address"
-                          type="text"
-                          required
-                          value={formData.address}
-                          onChange={(e) => setFormData({ ...formData, address: e.target.value })}
-                          className="w-full rounded-lg border border-input bg-background px-4 py-2.5 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
-                          placeholder="12 rue de la Paix"
-                        />
-                      </div>
-                    )}
                     <div>
-                      <label className="block text-base font-semibold text-foreground mb-2">
-                        <Calendar className="w-4 h-4 inline mr-1.5 -mt-0.5" />
-                        Date souhaitée *
-                      </label>
-                      <div className="grid grid-cols-4 gap-1.5 max-h-[120px] overflow-y-auto">
-                        {availableDates.map((date) => (
+                      <label className="block text-base font-semibold text-foreground mb-1.5">Délai souhaité</label>
+                      <div className="flex gap-2">
+                        {["Urgent", "1 - 6 mois", "> 6 mois"].map((option) => (
                           <button
-                            key={date}
+                            key={option}
                             type="button"
-                            onClick={() => setFormData({ ...formData, date })}
-                            className={`rounded-lg border px-2 py-1.5 text-xs font-medium transition-all ${
-                              formData.date === date
+                            onClick={() => setFormData({ ...formData, delai: option })}
+                            className={`flex-1 rounded-lg border px-3 py-2 text-base font-medium transition-all ${
+                              formData.delai === option
                                 ? "bg-primary border-primary text-primary-foreground"
                                 : "border-input bg-background text-foreground hover:border-ring"
                             }`}
                           >
-                            {formatDateLabel(date)}
+                            {option}
                           </button>
                         ))}
                       </div>
                     </div>
 
                     <div>
-                      <label className="block text-base font-semibold text-foreground mb-2">
-                        <Clock className="w-4 h-4 inline mr-1.5 -mt-0.5" />
-                        Heure souhaitée *
+                      <label htmlFor="lp3-message" className="block text-base font-semibold text-foreground mb-1">
+                        Décrivez votre projet
                       </label>
-                      <div className="grid grid-cols-4 gap-1.5">
-                        {timeSlots.map((time) => (
-                          <button
-                            key={time}
-                            type="button"
-                            onClick={() => setFormData({ ...formData, time })}
-                            className={`rounded-lg border px-2 py-1.5 text-xs font-medium transition-all ${
-                              formData.time === time
-                                ? "bg-primary border-primary text-primary-foreground"
-                                : "border-input bg-background text-foreground hover:border-ring"
-                            }`}
-                          >
-                            {time}
-                          </button>
-                        ))}
-                      </div>
+                      <textarea
+                        id="lp3-message"
+                        rows={4}
+                        value={formData.message}
+                        onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                        className="w-full rounded-lg border border-input bg-background px-4 py-2.5 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-none"
+                        placeholder="Surface, type de bâtiment, travaux souhaités..."
+                      />
                     </div>
 
                     <button
                       type="submit"
                       className="w-full rounded-lg bg-primary px-6 py-3.5 text-lg font-bold text-primary-foreground shadow-[var(--shadow-cta)] hover:brightness-110 transition-all"
                     >
-                      Confirmer mon rendez-vous →
+                      Recevoir mon devis gratuit →
                     </button>
 
                     <p className="text-sm text-muted-foreground text-center">
