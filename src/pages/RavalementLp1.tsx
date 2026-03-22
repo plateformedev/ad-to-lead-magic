@@ -6,7 +6,7 @@ import heroImg2 from "@/assets/ravalement2-2.jpg";
 import heroImg3 from "@/assets/ravalement3-2.jpg";
 import heroImg4 from "@/assets/ravalement4-2.jpg";
 import heroImg5 from "@/assets/ravalement5-2.jpg";
-import logoDsd from "@/assets/logo-dsd.png";
+import logoDsd from "@/assets/logo-dsd-white.png";
 import certirenovLogo from "@/assets/certirenov-rge.png";
 
 const serviceOptions = [
