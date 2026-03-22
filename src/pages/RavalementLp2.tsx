@@ -144,7 +144,7 @@ const RavalementLp2 = () => {
             ) : (
               <form
                 onSubmit={handleSubmit}
-                className="bg-card/95 backdrop-blur-sm rounded-xl p-6 lg:p-8 shadow-[var(--shadow-card)] border border-border w-full space-y-4"
+                className="bg-card/95 backdrop-blur-sm rounded-xl p-6 lg:p-8 shadow-[var(--shadow-card)] border border-border w-full space-y-4 min-h-[420px] flex flex-col justify-center"
               >
                 {step === 1 ? (
                   <>
