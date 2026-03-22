@@ -115,7 +115,7 @@ const RavalementLp3 = () => {
                     <h2 className="text-2xl font-bold text-foreground text-center">Devis ravalement</h2>
                     <div>
                       <label htmlFor="lp3-email" className="block text-base font-semibold text-foreground mb-1">
-                        Quelle est votre adresse e-mail ? *
+                        Votre e-mail *
                       </label>
                       <input
                         id="lp3-email"
